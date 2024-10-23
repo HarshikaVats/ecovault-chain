@@ -1,7 +1,28 @@
-![image](https://github.com/user-attachments/assets/8f86402b-bad1-47fb-acdd-11b782c49b9a)[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Community](https://img.shields.io/badge/Join-Community-blue)](https://developer.ibm.com/callforcode/solutions/projects/get-started/)
+<div>
+  <img width="64" height="64" src="https://img.icons8.com/laces/64/40C057/e.png" alt="e"/>
+  <img width="64" height="64" src="https://img.icons8.com/laces/64/40C057/c.png" alt="c"/>
+  <img width="64" height="64" src="https://img.icons8.com/wired/64/40C057/circled.png" alt="o"/>
+  <img width="64" height="64" src="https://img.icons8.com/laces/64/40C057/v.png" alt="v"/>
+  <img width="64" height="64" src="https://img.icons8.com/laces/64/40C057/a.png" alt="a"/>
+  <img width="64" height="64" src="https://img.icons8.com/laces/64/40C057/u.png" alt="u"/>
+  <img width="64" height="64" src="https://img.icons8.com/laces/64/40C057/l.png" alt="l"/>
+  <img width="64" height="64" src="https://img.icons8.com/laces/64/40C057/t.png" alt="t"/>
+  <br>
+  <img width="64" height="64" src="https://img.icons8.com/laces/64/40C057/c.png" alt="c"/>
+  <img width="64" height="64" src="https://img.icons8.com/laces/64/40C057/h.png" alt="h"/>
+  <img width="64" height="64" src="https://img.icons8.com/laces/64/40C057/a.png" alt="a"/>
+  <img width="64" height="64" src="https://img.icons8.com/laces/64/40C057/i.png" alt="i"/>
+  <img width="64" height="64" src="https://img.icons8.com/laces/64/40C057/n.png" alt="n"/>
+  <img src="https://versatilevats.com/ibm/c4c/assets/logo-64.png">
+</div>
 
-<h2><p align="center"><img width="32px" src="https://versatilevats.com/ibm/c4c/assets/logo-64.png"> Ecovault Chain 🍀</p></h2>
-<h3 align="center">By Team Invincibles</h3>
+<br>
+
+> **Revolutionizing Secure Deliveries**: Connecting Buyers and Sellers with Eco-Friendly, Blockchain-Powered Vaults!
+<hr>
+
+<br>
+<br>
 
 - [Project summary](#project-summary)
   - [The issue we are hoping to solve](#the-issue-we-are-hoping-to-solve)
