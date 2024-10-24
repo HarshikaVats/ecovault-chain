@@ -1,0 +1,9 @@
+Flask
+numpy
+Pillow
+requests
+flask_cors 
+openvino>=2023.1.0
+transformers[torch]>=4.30
+# huggingface-hub==0.17.0, whereas it automatically installs version 0.20.3
+huggingface-hub
