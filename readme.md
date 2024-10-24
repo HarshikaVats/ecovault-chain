@@ -330,10 +330,10 @@ Once you are on the checkout page, click on the <b>Checkout</b> button to see th
 Website for buyers: https://versatilevats.com/ibm/c4c
 <p align="justify">As the login process is linked to email, so we cannot provide you demo credentials. So, in case you want to test out the website, you can create a new brand so that you can try out. <b>Note:</b> Once you click on the correct email code, go back to the previous tab from where the authentication flow started, because the UI will change there, not on the page which gets opened after you click on the email content</p>
 
-Extension for buyers: https://chromewebstore.google.com/detail/iaohncjbhmfoofcnefojdlaekamococb
+Extension for buyers: <a href="https://chromewebstore.google.com/detail/iaohncjbhmfoofcnefojdlaekamococb" target="_blank">https://chromewebstore.google.com/detail/iaohncjbhmfoofcnefojdlaekamococb</a>
 <p align="justify">We have sent the extension to be reveiewd to the Google team, and it will take atmost a week's time to get published. The link will start workign once its published! So, please wait for a couple of days, as we are sure that by 28th October, the extension will be live and then you can use out already embedded credentials to use the project.</p>
 
-> But you know what, till the extension isn't published, you can visit the checkout page as it has the AI assistant with which you can interact with. https://versatilevats.com/ibm/c4c/extension/checkout.html
+> But you know what, till the extension isn't published, you can visit the checkout page as it has the AI assistant with which you can interact with. <a href="https://versatilevats.com/ibm/c4c/extension/checkout.html" target="_blank">https://versatilevats.com/ibm/c4c/extension/checkout.html</a>
 
 ---
 
