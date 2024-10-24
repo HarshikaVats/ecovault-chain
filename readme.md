@@ -267,9 +267,6 @@ The <b>ML Zero Shot Image Classification model</b> is designed to enhance the bu
 
 <p align="justify">6. The <b>text-to-SQL model is made using IBM WatsonX</b> (already discussed in the previous sections). It provides a uique way of interacting with the database and returns the correct response most of the time.</p>
 
-<h3>Now, let's know more about the CHECKOUT process and physical ecovaults</h3>
-
-
 <p align="center">
   <img src="https://github.com/user-attachments/assets/a3b90b69-2bab-459a-ac22-82baee5c4801" width="256px">
   <img src="https://github.com/user-attachments/assets/11d904ec-cdea-40db-b90b-2ee15e93865e" width="256px">
@@ -281,11 +278,38 @@ The <b>ML Zero Shot Image Classification model</b> is designed to enhance the bu
   <img src="https://github.com/user-attachments/assets/076b3c73-64b6-4f57-992f-1d32ae25c960" width="256px">
 </p>
 
+<h3>Now, let's know more about the CHECKOUT process and physical ecovaults</h3>
+
+<p align="justify"><b>🔏 Physical Ecovaults:</b> They are a key innovation in our project, designed to address both sustainability and convenience in the last-mile delivery process. These vaults are strategically deployed physical lockers based on **NodeMCU microcontroller technology**, allowing secure storage for deliveries. With the use of <b>RFID tags</b>, buyers can easily collect their packages at their convenience without relying on traditional delivery windows. This not only reduces the number of redundant delivery trips but also minimizes the carbon footprint associated with e-commerce logistics. By optimizing delivery routes and using eco-friendly vaults, EcoVault Chain ensures that deliveries are both secure and environmentally responsible, paving the way for a greener and more sustainable future in the e-commerce space.</p>
+
+<p align="justify"><b>Checkout process:</b> Once the user is happy with the cart, he/she can click on the cart icon, and that will open the checkout webpage which will have the following things:
+<ol>
+  <li>Previous orders in a tabular format (clicking on it, will open the particular order)</li>
+  <li>Vault locations (so that you can see whether you can use the vault feature for pickup or not?)</li>
+  <li>Complete the current order by paying for it</li>
+  <li>Interact with the <b>WatsonX Orchestrate AI Assistant</b></li>
+</ol>
+Once you are on the checkout page, click on the <b>Checkout</b> button to see the order in the checkout page and that will check whether you have a <b>physical RFID tag or not?</b> The RFID tag means that you can use the vault feature (as you have the RFID tag). As of now, we have added the tag for only our testing account (because a new user cannot have a physical RFID tag), but do note that, in the future version of the application, the buyer can raise a request for the RFID tag/card, so that they can also avail the vault feature. If the buyer has the physical tag, then the following things will be done:
+
+<ol>
+  <li>As of now, there are only 3 vault locations that we have specified in the code (and all of them are in <b>INDIA</b>). At the time of checking out, if you are within <b>10km radius</b> of any of those vaults, you can use the vault feature</li>
+  <li>From a maximum of 3 vaults, you can choose which one you would like the order to be dropped at</li>
+</ol>
+
+<b>Vault Features:</b> 
+<ol>
+  <li><b>Secure Storage:</b> Once the order is placed in the vault, it remains securely stored until the buyer retrieves it using their RFID tag. This ensures that the package is safe from theft or damage, making it a reliable option for users.</li>
+  <li><b>Eco-Friendly Delivery:</b> By using nearby vaults, the number of delivery trips can be minimized, reducing carbon emissions and promoting sustainability.</li>
+  <li><b>Real-Time Updates:</b> Buyers receive real-time notifications when their package is placed in the vault and is ready for pickup, adding convenience to the shopping experience.</li>
+  <li><b>Flexible Pickup Times:</b> Buyers can retrieve their orders at their convenience from the vault, eliminating the need to wait for a specific delivery window at home or work.</li>
+  <li><b>RFID Authentication:</b> Only buyers with an RFID tag can unlock the vault and access their package, ensuring secure access and privacy.</li>
+</ol>
+</p>
+
 <br>
 
 ### Presentation materials <a name="presentation-materials"></a>
 <hr>
-_INSTRUCTIONS: The following deliverables should be officially posted to your My Team > Submissions section of the [Call for Code Global Challenge resources site](https://cfc-prod.skillsnetwork.site/), but you can also include them here for completeness. Replace the examples seen here with your own deliverable links._
 
 ### Solution demo video <a name="demo-video"></a>
 [![Watch the video](https://raw.githubusercontent.com/Liquid-Prep/Liquid-Prep/main/images/readme/IBM-interview-video-image.png)](https://youtu.be/vOgCOoy_Bx0)
@@ -302,9 +326,6 @@ _INSTRUCTIONS: The following deliverables should be officially posted to your My
 
 ### Additional details <a name="additional-details"></a>
 <hr>
-_INSTRUCTIONS: The following deliverables are suggested, but **optional**. Additional details like this can help the judges better review your solution. Remove any sections you are not using._
-
-<br>
 
 ### How to run the project <a name="how-to-run-the-project"></a>
 <hr>
