@@ -135,6 +135,8 @@
 - [watsonx Assistant](https://cloud.ibm.com/catalog/services/watsonx-assistant) 
   <img src="https://github.com/user-attachments/assets/84c5d956-f369-4f08-9fba-4c3e991a3121">
 
+  <p align="justify">We have not only used the basic actions of WatsonX Orchestrate AI Assistant in our chatbot, but also <b>created a custom-skill</b> json file, so that we can connect the chatbot to our backend and fetch results to aid the buyer in the best way possible</p>
+  
   <br>
 
   <p align="justify">
@@ -144,6 +146,7 @@
     <img width="250px" src="https://github.com/user-attachments/assets/b85306e8-a5df-4010-ae7b-a7144ee20a8f">
     <img width="250px" src="https://github.com/user-attachments/assets/69a13833-be4f-45a9-aa93-c69b4654f6aa">
   </p>
+
 
 
 ### Other IBM technology used <a name="other-ibm-technology-used"></a>
