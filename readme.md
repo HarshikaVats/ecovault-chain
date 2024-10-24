@@ -223,7 +223,7 @@ This project goes beyond simple order and delivery — it redefines how e-commer
 > These services provide the technical foundation necessary for maintaining an efficient, scalable, and secure application environment.
 
 ### Solution architecture <a name="solution-architecture"></a>
-<p align="center"><img width="1024px" src="https://github.com/user-attachments/assets/1e38b270-d189-4fd4-9563-0c45fef02c86"></p>
+<p align="center"><img width="1024px" src="https://github.com/user-attachments/assets/7c4595e9-b0cd-4ab0-895e-b500fbf2fd04"></p>
 
 
 ## Presentation materials <a name="presentation-materials"></a>
