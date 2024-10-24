@@ -212,8 +212,6 @@ This project goes beyond simple order and delivery — it redefines how e-commer
 
 - [Red Hat OpenShift Container Platform on VPC Landing Zone]() - We chose this service for scaling and managing our Kubernetes clusters on IBM Cloud. The integration with the VPC landing zone ensures security, compliance, and flexibility for handling the dynamic needs of our application.
 
-- [IBM Cloud Object Storage]() - We used IBM Cloud Object Storage to handle and store all user data, project files, and large assets, especially those utilized in our WatsonX Flow. The service provides scalable, secure storage and simplifies the retrieval of essential data for smooth operations.
-
 - [IBM Cloud Databases for MySQL]() - For our database needs, we opted for MySQL on IBM Cloud to efficiently manage all our data. With features like automated backups, high availability, and disaster recovery, this service ensures our database remains robust and resilient against any potential downtime.
 
 - [IBM API Connect]() - We relied on IBM API Connect to manage and expose our APIs securely. This helped us handle authentication, rate limiting, and monitoring for APIs that interact with the WatsonX services and other third-party systems, ensuring a seamless integration across various components.
@@ -225,17 +223,8 @@ This project goes beyond simple order and delivery — it redefines how e-commer
 > These services provide the technical foundation necessary for maintaining an efficient, scalable, and secure application environment.
 
 ### Solution architecture <a name="solution-architecture"></a>
+<img width="1024px" src="https://github.com/user-attachments/assets/1e38b270-d189-4fd4-9563-0c45fef02c86">
 
-REPLACE THIS EXAMPLE WITH YOUR OWN, OR REMOVE THIS EXAMPLE
-
-Diagram and step-by-step description of the flow of our solution:
-
-![Video transcription/translaftion app](https://developer.ibm.com/developer/tutorials/cfc-starter-kit-speech-to-text-app-example/images/cfc-covid19-remote-education-diagram-2.png)
-
-1. The user navigates to the site and uploads a video file.
-2. Watson Speech to Text processes the audio and extracts the text.
-3. Watson Translation (optionally) can translate the text to the desired language.
-4. The app stores the translated text as a document within Object Storage.
 
 ## Presentation materials <a name="presentation-materials"></a>
 
