@@ -37,10 +37,6 @@
 - [Additional details](#additional-details)
   - [How to run the project](#how-to-run-the-project)
   - [Live demo](#live-demo)
-- [About this template](#about-this-template)
-  - [Contributing](#contributing)
-  - [Versioning](#versioning)
-  - [Authors](#authors)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
 
@@ -88,19 +84,59 @@
 
 ## Technology implementation <a name="technology-implementation"></a>
 
-### IBM watsonx product(s) used
-
-_INSTRUCTIONS: Included here is a list of IBM watsonx products. Remove any products you did not use. Leave only those included in your solution code. In your official submission on the Call for Code Global Challenge web site, you are required to provide details on where and how you used each IBM watsonx product so judges can review your implementation. Remove these instructions._
+### IBM watsonx product(s) used <a name="ibm-ai-services-used"></a>
 
 **Featured watsonx products**
 
-- [watsonx.ai](https://www.ibm.com/products/watsonx-ai) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+- [watsonx ai, data, & governance](https://www.ibm.com/products/watsonx-ai) -
+  <p align="justify">It is being used in the <b>Text to SQL AI Model</b> for the buyers in the extension. I leveraged IBM WatsonX.ai, IBM’s cutting-edge AI platform, to build and deploy my Test-to-SQL model—a natural language processing model that translates user queries into SQL commands. The model enhances the user experience by allowing users to input text-based queries and retrieve structured data efficiently. Here's the step-by-step process that was followed using WatsonX to make the model live:</p>
+  <img width="256px" src="https://github.com/user-attachments/assets/e93fa881-8536-4ea7-9e8b-2196f46f13de">
+  <p align="justify">
+    <b>1. Data Ingestion and Preprocessing with WatsonX Data</b>: Using IBM WatsonX.data, we ingested a large dataset containing human-readable test queries and their corresponding SQL commands. The platform’s ability to handle unstructured data, including various text formats and SQL queries, made the ingestion process seamless. Through WatsonX’s data connectors, we were able to connect various data sources such as relational databases (MySQL) and existing datasets to build a comprehensive training corpus.
 
-- [watsonx.governance](https://www.ibm.com/products/watsonx-governance) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+      Data Sources: Sample queries and corresponding SQL statements from various domains (e.g., e-commerce, finance).
+      Preprocessing: With the help of WatsonX, we cleaned and normalized the text data using built-in text extraction and data cleansing tools, ensuring uniformity in query formats and SQL outputs.
 
-- [watsonx Assistant](https://cloud.ibm.com/catalog/services/watsonx-assistant) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+  <b>2. Model Training Using WatsonX.ai</b>: The core of the project revolved around training the Test-to-SQL model using IBM WatsonX.ai. WatsonX provided a flexible and scalable environment to build the machine learning pipeline.
 
-### Other IBM technology used
+       Model Architecture: We used a Transformer-based architecture for this task, leveraging WatsonX’s Granite model series (Granite-13B-chat) for encoding the natural language queries.
+
+       Transfer Learning: The WatsonX models, trained on large-scale data, offered an excellent base. Using transfer learning, we fine-tuned the pre-existing models using the Test-to-SQL dataset prepared earlier.
+
+       Hyperparameter Optimization: WatsonX’s automated machine learning (AutoML) tools helped optimize hyperparameters such as batch size, learning rate, and the number of epochs, ensuring efficient training and minimizing overfitting.
+
+  <b>3. Real-time Inference via WatsonX.ai APIs</b>: After successfully training the model, I deployed it using WatsonX.ai's APIs for real-time inference. The WatsonX platform provided the necessary tools to deploy the model as a REST API.
+
+       Endpoint Management: The model was exposed through a WatsonX.ai REST endpoint that allowed the translation of natural language queries to SQL commands in real-time.
+
+       API Integration: The API was integrated into the front-end application that users interact with, where they input text queries, and the API returns SQL statements for further execution.
+        
+  <b>4. Model Monitoring and Governance with WatsonX Governance</b>:To ensure the continued performance of the Test-to-SQL model and maintain model governance, I employed WatsonX.governance.
+
+       Audit and Monitoring: The model’s performance, including accuracy, response time, and error rates, was continuously monitored using WatsonX’s model management tools. Regular audits ensured the model remained within the set accuracy thresholds.
+       Security: WatsonX.governance also helped to implement role-based access controls (RBAC), ensuring that only authorized users could access the sensitive data queried via the model.
+      
+  <b>5. Collaboration and Team Management</b>: Throughout the development lifecycle, WatsonX provided a collaborative platform for multiple stakeholders:
+
+       Multi-user environment: Developers and data scientists could simultaneously work on different aspects of the model, such as tweaking the dataset, improving the model, or analyzing the results.
+       Versioning and Experiment Tracking: Using WatsonX’s built-in tools for experiment tracking and version control, I could track different versions of the model to ensure consistent improvements and rollback options when needed.
+
+  <b>6. Integrating with Existing Databases</b>: The final step was integrating the Test-to-SQL model with existing relational databases like MySQL or PostgreSQL to allow live querying. WatsonX’s APIs were instrumental in establishing secure connections to external databases, ensuring that real-time SQL queries could be executed without latency.
+
+       Database Queries: SQL commands generated by the model were dynamically executed on the linked databases to return results, making the entire setup real-time and responsive.
+
+<br>
+
+  > <b>Conclusion:</b>
+  Using IBM WatsonX, we were able to build, fine-tune, and deploy the Test-to-SQL model seamlessly. WatsonX's advanced AI models, data management tools, and governance features played a pivotal role in ensuring that the model is not only accurate but also scalable and secure for real-world use. This deployment enhances user interaction with databases through natural language queries, simplifying complex SQL command generation.</p>
+
+ <br> 
+
+- [watsonx Assistant](https://cloud.ibm.com/catalog/services/watsonx-assistant) 
+  <img src="https://github.com/user-attachments/assets/efdd4123-4e5b-46ab-8992-028d41006018">
+
+
+### Other IBM technology used <a name="other-ibm-technology-used"></a>
 
 INSTRUCTIONS: List any other IBM technology or IBM AI services used in your solution and describe how each component was used. If you can provide details on where these were used in your code, that would help the judges review your submission.
 
@@ -118,7 +154,7 @@ INSTRUCTIONS: List any other IBM technology or IBM AI services used in your solu
 
 - [Language Translator](https://cloud.ibm.com/catalog/services/language-translator) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
 
-### Solution architecture
+### Solution architecture <a name="solution-architecture"></a>
 
 REPLACE THIS EXAMPLE WITH YOUR OWN, OR REMOVE THIS EXAMPLE
 
@@ -131,15 +167,15 @@ Diagram and step-by-step description of the flow of our solution:
 3. Watson Translation (optionally) can translate the text to the desired language.
 4. The app stores the translated text as a document within Object Storage.
 
-## Presentation materials
+## Presentation materials <a name="presentation-materials"></a>
 
 _INSTRUCTIONS: The following deliverables should be officially posted to your My Team > Submissions section of the [Call for Code Global Challenge resources site](https://cfc-prod.skillsnetwork.site/), but you can also include them here for completeness. Replace the examples seen here with your own deliverable links._
 
-### Solution demo video
+### Solution demo video <a name="issue-we-are-solving"></a>
 
 [![Watch the video](https://raw.githubusercontent.com/Liquid-Prep/Liquid-Prep/main/images/readme/IBM-interview-video-image.png)](https://youtu.be/vOgCOoy_Bx0)
 
-### Project development roadmap
+### Project development roadmap <a name="project-development-roadmap"></a>
 
 The project currently does the following things.
 
@@ -153,15 +189,15 @@ See below for our proposed schedule on next steps after Call for Code 2024 submi
 
 ![Roadmap](./images/roadmap.jpg)
 
-## Additional details
+## Additional details <a name="additional-details"></a>
 
 _INSTRUCTIONS: The following deliverables are suggested, but **optional**. Additional details like this can help the judges better review your solution. Remove any sections you are not using._
 
-### How to run the project
+### How to run the project <a name="how-to-run-the-project"></a>
 
 INSTRUCTIONS: In this section you add the instructions to run your project on your local machine for development and testing purposes. You can also add instructions on how to deploy the project in production.
 
-### Live demo
+### Live demo <a name="live-demo"></a>
 
 You can find a running system to test at...
 
@@ -169,30 +205,10 @@ See our [description document](./docs/DESCRIPTION.md) for log in credentials.
 
 ---
 
-_INSTRUCTIONS: You can remove the below section from your specific project README._
-
-## About this template
-
-### Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-### Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
-### Authors
-
-<a href="https://github.com/Call-for-Code/Project-Sample/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=Call-for-Code/Project-Sample" />
-</a>
-
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
-
-### License
+### License <a name="license"></a>
 
 This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details.
 
-### Acknowledgments
+### Acknowledgments <a name="acknowledgments"></a>
 
 - Based on [Billie Thompson's README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2).
