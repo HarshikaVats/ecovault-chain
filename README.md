@@ -44,9 +44,9 @@
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
 
-## Project Summary
+## Project Summary <a name="project-summary"></a>
 
-### The Issue We Are Hoping to Solve
+### The Issue We Are Hoping to Solve <a name="the-issue-we-are-hoping-to-solve"></a>
 
 <p align="justify">As we move further into the era of web3, one of the most significant challenges is the lack of practical, user-friendly applications that offer real value to everyday users and businesses. Most web3 projects today are focused on NFTs, staking, or minting, which appeal to a niche market but don't address the broader needs of the global consumer base. This has resulted in a large portion of users, approximately 99%, remaining within the web2 ecosystem due to comfort, familiarity, and the absence of meaningful incentives to transition to web3.</p>
 
@@ -56,7 +56,7 @@
 
 <br>
 
-### How Our Technology Solution Can Help
+### How Our Technology Solution Can Help <a name="how-our-technology-solution-can-help"></a>
 
 <p align="justify">To address these challenges, we created <b>EcoVault Chain</b>, a forward-thinking platform that combines the strengths of web3 technology with sustainable delivery practices. At its core, EcoVault Chain is designed to bridge the gap between web2 and web3 by offering a seamless, user-friendly experience for both buyers and sellers. By incorporating decentralized systems, blockchain technology, and smart contracts, EcoVault Chain offers users a secure, transparent, and efficient platform that is easy to navigate.</p>
 
@@ -86,7 +86,7 @@
 
 <br>
 
-## Technology implementation
+## Technology implementation <a name="technology-implementation"></a>
 
 ### IBM watsonx product(s) used
 
