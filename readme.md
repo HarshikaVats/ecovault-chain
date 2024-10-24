@@ -109,6 +109,15 @@
 
 <br>
 
+### Alignment with the theme
+<p align="justify">
+  Our project aligns seamlessly with the theme of <b>"How can generative AI technology improve equitable access to essential resources and opportunities for all people?"</b> by leveraging the power of generative AI and Web3 technologies to create an inclusive ecosystem for both buyers and sellers. The platform provides smaller sellers, who might otherwise struggle to gain visibility in traditional markets, with the opportunity to be recognized by a wide pool of buyers. This access to a larger audience helps to level the playing field, granting smaller vendors the same chances for success as larger businesses.</p>
+
+<p align="justify">Additionally, the use of Web3 technology enhances the security and transparency of transactions, ensuring a safe environment for both buyers and sellers. This project focuses on building trust within a decentralized framework, fostering equitable opportunities for everyone involved. By combining generative AI to personalize user interactions and Web3's security features, the project promotes equitable access to essential resources—market exposure for sellers and reliable, secure transactions for buyers. This not only boosts economic opportunities but also contributes to environmental sustainability by incorporating physical vaults that reduce carbon emissions associated with traditional delivery methods.
+</p>
+
+<br>
+
 ## Technology implementation <a name="technology-implementation"></a>
 
 ### IBM watsonx product(s) used <a name="ibm-ai-services-used"></a>
