@@ -129,10 +129,11 @@ This project goes beyond simple order and delivery — it redefines how e-commer
 
 <br>
 
-<h3>Technology implementation <a name="technology-implementation"></a></h3>
+## Technology implementation <a name="technology-implementation"></a>
+This project is a perfect culmination of software and hardware, and provide a lot of things to interact with. So, let's start diving into the details.
 
 ### IBM watsonx product(s) used <a name="ibm-ai-services-used"></a>
-<hr>
+
 **Featured watsonx products**
 
 - [watsonx ai, data, & governance](https://www.ibm.com/products/watsonx-ai) -
@@ -208,7 +209,7 @@ This project goes beyond simple order and delivery — it redefines how e-commer
 <br>
 
 ### Other IBM technology used <a name="other-ibm-technology-used"></a>
-<hr>
+
 **Additional IBM AI services (Remove any that you did not use)**
 
 - [Red Hat OpenShift Container Platform on VPC Landing Zone]() - We chose this service for scaling and managing our Kubernetes clusters on IBM Cloud. The integration with the VPC landing zone ensures security, compliance, and flexibility for handling the dynamic needs of our application.
@@ -234,9 +235,20 @@ Let's have a look at how things work for a **seller:**
   1. Best is the test
 </p>
 
+<p align="justify">Image gallery for the sellers' website:</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/505bc1e3-1fef-43d9-932a-46ebc4c4d470" width="512px">
+  <img src="https://github.com/user-attachments/assets/b1f5739f-54c0-4bd6-b4ca-5cdde817696e" width="512px">
+  <img src="https://github.com/user-attachments/assets/e9cba864-570b-4639-932b-a10da5aa2218" width="512px">
+  <img src="https://github.com/user-attachments/assets/ba5572ef-b14f-470b-8fca-7216c857146c" width="512px">
+  <img src="https://github.com/user-attachments/assets/afb1cf31-ce3c-497c-baf9-d4f3a7f279cd" width="512px">
+  <img src="https://github.com/user-attachments/assets/e2071563-bf20-460d-8f75-9c4b2ddea9fb" width="512px">
+</p>
+
 <br>
 
-## Presentation materials <a name="presentation-materials"></a>
+### Presentation materials <a name="presentation-materials"></a>
 <hr>
 _INSTRUCTIONS: The following deliverables should be officially posted to your My Team > Submissions section of the [Call for Code Global Challenge resources site](https://cfc-prod.skillsnetwork.site/), but you can also include them here for completeness. Replace the examples seen here with your own deliverable links._
 
@@ -247,11 +259,13 @@ _INSTRUCTIONS: The following deliverables should be officially posted to your My
 
 ### Project development roadmap <a name="project-development-roadmap"></a>
 <hr>
-<p align="center"><img src="https://github.com/user-attachments/assets/b73c3bf9-ef3f-405e-926a-523f57eafb59"></ing></p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b73c3bf9-ef3f-405e-926a-523f57eafb59">
+</p>
 
 <br>
 
-## Additional details <a name="additional-details"></a>
+### Additional details <a name="additional-details"></a>
 <hr>
 _INSTRUCTIONS: The following deliverables are suggested, but **optional**. Additional details like this can help the judges better review your solution. Remove any sections you are not using._
 
