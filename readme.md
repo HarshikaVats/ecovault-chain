@@ -137,7 +137,7 @@
 - [watsonx Assistant](https://cloud.ibm.com/catalog/services/watsonx-assistant)
   <img src="https://github.com/user-attachments/assets/84c5d956-f369-4f08-9fba-4c3e991a3121">
 
-  <p align="justify">We have not only used the basic actions of WatsonX Orchestrate AI Assistant in our chatbot, but also <b>created a custom-skill</b> json file, so that we can connect the chatbot to our backend and fetch results to aid the buyer in the best way possible</p>
+  <p align="justify">We have not only used the basic actions of WatsonX Orchestrate AI Assistant in our chatbot, but also <b><a href="./ecovault-chain-final-custom_skill.json">created a custom-skill</a></b> json file, so that we can connect the chatbot to our backend and fetch results to aid the buyer in the best way possible</p>
 
   <br>
 
