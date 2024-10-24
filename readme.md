@@ -28,6 +28,7 @@
   - [The issue we are hoping to solve](#the-issue-we-are-hoping-to-solve)
   - [How our technology solution can help](#how-our-technology-solution-can-help)
   - [Our idea](#our-idea)
+  - [UN SDG](#un-sdg)
 - [Technology implementation](#technology-implementation)
   - [IBM watsonx product(s) used](#ibm-ai-services-used)
   - [Other IBM technology used](#other-ibm-technology-used)
@@ -80,6 +81,29 @@
 <p align="justify">Additionally, EcoVault Chain is built using IBM's <b>RedHat OpenShift Container Platform</b> to ensure scalability, security, and performance. This containerized environment allows for smooth operation and deployment, enabling the platform to scale easily as the user base grows.</p>
 
 <p align="justify">The combination of cutting-edge web3 technology, IBM’s powerful WatsonX services, and a commitment to sustainability makes EcoVault Chain a trailblazer in the world of e-commerce. By focusing on real-world problems like last-mile delivery inefficiencies and the environmental impact of logistics, EcoVault Chain offers a solution that is both practical and forward-thinking, helping to usher in a new era of eco-friendly online shopping.</p>
+
+<br>
+
+### UN SDG fulfilled by the project <a name="un-sdg"></a>
+<img width="128px" src="https://github.com/user-attachments/assets/51fa2b9e-19ab-4829-99ea-afea9640392b">
+<img width="128px" src="https://github.com/user-attachments/assets/a54057e9-2a22-40b7-af7e-2df86ba65ca9">
+<img width="128px" src="https://github.com/user-attachments/assets/d515e2f9-e132-4117-bc22-a97416742ee5">
+<img width="128px" src="https://github.com/user-attachments/assets/4e06ed55-6766-401d-99ad-a5e3043993dd">
+<img width="128px" src="https://github.com/user-attachments/assets/3731ffe7-5c9d-4013-aff7-33859ca6bb97">
+<img width="128px" src="https://github.com/user-attachments/assets/f74a0fe5-efed-4c75-9290-ee75a2c58f0d">
+<img width="128px" src="https://github.com/user-attachments/assets/f2063cc3-02c5-421e-b1cb-226f964c12eb">
+
+<p align="justify">Let's have a look at the various <b>UN SDG</b> fulfilled by this project: 
+<ul>
+  <li><b>Goal 7: Affordable and Clean Energy</b>: Although not directly related to energy, the project indirectly impacts the need for clean energy by promoting systems that require less energy for transportation, supporting overall sustainability in energy </li>
+  <li><b>Goal 8: Decent Work and Economic Growth</b>: By introducing new technologies (blockchain, decentralized storage, Web3), the project can create new jobs in tech and sustainability sectors, promoting economic growth through innovation. </li>
+  <li><b>Goal 9: Industry, Innovation, and Infrastructure</b>: The project leverages Web3 technology, blockchain, and IBM WatsonX services to create innovative solutions for secure and decentralized storage, contributing to sustainable infrastructure. </li>
+  <li><b>Goal 11: Sustainable Cities and Communities</b>: By optimizing delivery processes and using physical vaults to reduce transportation emissions, the project directly contributes to the sustainability of urban and local communities, making them more resilient to environmental challenges. </li>
+  <li><b>Goal 12: Responsible Consumption and Production</b>: The project encourages the reduction of carbon emissions by optimizing delivery and storage systems. It promotes sustainable consumption practices by reducing environmental impact, especially in logistics. </li>
+  <li><b>Goal 13: Climate Action</b>:The project actively works to reduce carbon emissions, contributing to the mitigation of climate change impacts. This aligns with efforts to combat climate change through carbon footprint reduction in deliveries. </li>
+  <li><b>Goal 17: Partnerships for the Goals</b>:The use of IBM WatsonX and other Web3 technologies suggests partnerships that align with SDG goals, fostering collaboration and cooperation between various technological platforms and industries </li>
+</ul>
+</p>
 
 <br>
 
