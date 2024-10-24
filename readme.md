@@ -18,7 +18,7 @@
 
 <br>
 
-> **Revolutionizing Secure Deliveries**: Connecting Buyers and Sellers with Eco-Friendly, Blockchain-Powered Vaults!
+> Empowering Sellers, Connecting Buyers, and Reducing Carbon Footprint with Eco-Friendly Vaults!
 
 <hr>
 
