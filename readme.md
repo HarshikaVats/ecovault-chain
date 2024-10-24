@@ -231,9 +231,11 @@ This project is a perfect culmination of software and hardware, and provide a lo
 <p align="center"><img width="1024px" src="https://github.com/user-attachments/assets/7c4595e9-b0cd-4ab0-895e-b500fbf2fd04"></p>
 
 Let's have a look at how things work for a **seller:**
-<p align="justify">
-  1. Best is the test
-</p>
+<p align="justify">1. Once email is entered in the login form, it is checked whether this email is associated with a brand or not? If it is, then an email authentication is carried out (to ensure that the right person is accessing the account) wheeras if the email is new, then some details have to be filled to create a new account. <b>Passwordless authentication</b> is safeguarding the authentication process.</p> 
+
+<p align="justify">2. Brands have two main pages to interact on the website: the <b>products</b>b> page and the <b>analytics</b> page. The <b>products</b> page allows brands to manage their inventory, while the <b>analytics</b> page offers insights and data related to the brand's performance on the platform. When adding a product, the <b>Zero Shot Image Classification Model</b> automatically generates an appropriate label for the product image to ensure platform-wide consistency. For example, one brand might label a product as a <b>phone</b>, while another might use terms like <b>mobile phone</b> or <b>cell phone</b>. Such inconsistencies could affect the accuracy of the <b>text-to-SQL method</b> that buyers use for queries. The model helps standardize these labels based on existing products in the system. However, if the model encounters an unfamiliar image, such as a jacket, and incorrectly labels it (e.g., as a <b>phone</b>), the brand can manually update the label to ensure proper categorization for future reference. </p>
+
+<p align="justify">3. </p>
 
 <p align="justify">Image gallery for the sellers' website:</p>
 
