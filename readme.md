@@ -262,7 +262,7 @@ See our [description document](./docs/DESCRIPTION.md) for log in credentials.
 
 ### License <a name="license"></a>
 
-This project is licensed under the Apache 2 License - see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the Apache 2 License - see the [LICENSE](./License) file for details.
 
 ### Acknowledgments <a name="acknowledgments"></a>
 
