@@ -40,7 +40,6 @@
   - [Solution demo video](#demo-video)
   - [Project development roadmap](#project-development-roadmap)
 - [Additional details](#additional-details)
-  - [How to run the project](#how-to-run-the-project)
   - [Live demo](#live-demo)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
@@ -327,28 +326,23 @@ Once you are on the checkout page, click on the <b>Checkout</b> button to see th
 ### Additional details <a name="additional-details"></a>
 <hr>
 
-### How to run the project <a name="how-to-run-the-project"></a>
-<hr>
-INSTRUCTIONS: In this section you add the instructions to run your project on your local machine for development and testing purposes. You can also add instructions on how to deploy the project in production.
-
-<br>
-
 ### Live demo <a name="live-demo"></a>
-<hr>
-You can find a running system to test at...
+Website for buyers: https://versatilevats.com/ibm/c4c
+<p align="justify">As the login process is linked to email, so we cannot provide you demo credentials. So, in case you want to test out the website, you can create a new brand so that you can try out. <b>Note:</b> Once you click on the correct email code, go back to the previous tab from where the authentication flow started, because the UI will change there, not on the page which gets opened after you click on the email content</p>
 
-See our [description document](./docs/DESCRIPTION.md) for log in credentials.
+Extension for buyers: https://chromewebstore.google.com/detail/iaohncjbhmfoofcnefojdlaekamococb
+<p align="justify">We have sent the extension to be reveiewd to the Google team, and it will take atmost a week's time to get published. The link will start workign once its published! So, please wait for a couple of days, as we are sure that by 28th October, the extension will be live and then you can use out already embedded credentials to use the project.</p>
+
+> But you know what, till the extension isn't published, you can visit the checkout page as it has the AI assistant with which you can interact with. https://versatilevats.com/ibm/c4c/extension/checkout.html
 
 ---
 
 <br>
 
 ### License <a name="license"></a>
-<hr>
 This project is licensed under the Apache 2 License - see the [LICENSE](./License) file for details.
 
 <br>
 
 ### Acknowledgments <a name="acknowledgments"></a>
-<hr>
-- Based on [Call for Code 2024 Submission Template]([https://gist.github.com/PurpleBooth/109311bb0361f32d87a2](https://github.com/Call-for-Code/Project-Sample))
+- Based on [Call for Code 2024 Submission Template](https://github.com/Call-for-Code/Project-Sample)
