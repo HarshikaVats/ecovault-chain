@@ -129,10 +129,10 @@ This project goes beyond simple order and delivery — it redefines how e-commer
 
 <br>
 
-## Technology implementation <a name="technology-implementation"></a>
+<h3>Technology implementation <a name="technology-implementation"></a></h3>
 
 ### IBM watsonx product(s) used <a name="ibm-ai-services-used"></a>
-
+<hr>
 **Featured watsonx products**
 
 - [watsonx ai, data, & governance](https://www.ibm.com/products/watsonx-ai) -
@@ -205,9 +205,10 @@ This project goes beyond simple order and delivery — it redefines how e-commer
 - [Foundational models with Prompt Lab](https://www.ibm.com/docs/en/watsonx/saas?topic=solutions-prompt-lab)
   <p align="justify">In my project, I leveraged IBM WatsonX's foundational models through Prompt Lab, specifically utilizing the IBM Granite model in two critical scenarios. Firstly, the Granite model generates feedback based on user prompts, ensuring a dynamic and intelligent response to the input provided by the users. Secondly, it analyzes the tone of the feedback submitted by users to categorize it, allowing for better insight into user sentiment. Both of these functionalities are seamlessly integrated into the Node.js server, making the process highly efficient and automated. This implementation highlights the versatility of WatsonX's foundational models in addressing real-world user interactions and sentiment analysis.</p>
 
+<br>
 
 ### Other IBM technology used <a name="other-ibm-technology-used"></a>
-
+<hr>
 **Additional IBM AI services (Remove any that you did not use)**
 
 - [Red Hat OpenShift Container Platform on VPC Landing Zone]() - We chose this service for scaling and managing our Kubernetes clusters on IBM Cloud. The integration with the VPC landing zone ensures security, compliance, and flexibility for handling the dynamic needs of our application.
@@ -222,52 +223,62 @@ This project goes beyond simple order and delivery — it redefines how e-commer
 
 > These services provide the technical foundation necessary for maintaining an efficient, scalable, and secure application environment.
 
+<br>
+
 ### Solution architecture <a name="solution-architecture"></a>
+<hr>
 <p align="center"><img width="1024px" src="https://github.com/user-attachments/assets/7c4595e9-b0cd-4ab0-895e-b500fbf2fd04"></p>
 
+Let's have a look at how things work for a **seller:**
+<p align="justify">
+  1. Best is the test
+</p>
+
+<br>
 
 ## Presentation materials <a name="presentation-materials"></a>
-
+<hr>
 _INSTRUCTIONS: The following deliverables should be officially posted to your My Team > Submissions section of the [Call for Code Global Challenge resources site](https://cfc-prod.skillsnetwork.site/), but you can also include them here for completeness. Replace the examples seen here with your own deliverable links._
 
 ### Solution demo video <a name="issue-we-are-solving"></a>
-
 [![Watch the video](https://raw.githubusercontent.com/Liquid-Prep/Liquid-Prep/main/images/readme/IBM-interview-video-image.png)](https://youtu.be/vOgCOoy_Bx0)
 
+<br>
+
 ### Project development roadmap <a name="project-development-roadmap"></a>
+<hr>
+<p align="center"><img src="https://github.com/user-attachments/assets/b73c3bf9-ef3f-405e-926a-523f57eafb59"></ing></p>
 
-The project currently does the following things.
-
-- Feature 1
-- Feature 2
-- Feature 3
-
-In the future we plan to...
-
-See below for our proposed schedule on next steps after Call for Code 2024 submission.
-
-![Roadmap](./images/roadmap.jpg)
+<br>
 
 ## Additional details <a name="additional-details"></a>
-
+<hr>
 _INSTRUCTIONS: The following deliverables are suggested, but **optional**. Additional details like this can help the judges better review your solution. Remove any sections you are not using._
 
-### How to run the project <a name="how-to-run-the-project"></a>
+<br>
 
+### How to run the project <a name="how-to-run-the-project"></a>
+<hr>
 INSTRUCTIONS: In this section you add the instructions to run your project on your local machine for development and testing purposes. You can also add instructions on how to deploy the project in production.
 
-### Live demo <a name="live-demo"></a>
+<br>
 
+### Live demo <a name="live-demo"></a>
+<hr>
 You can find a running system to test at...
 
 See our [description document](./docs/DESCRIPTION.md) for log in credentials.
 
 ---
 
-### License <a name="license"></a>
+<br>
 
+### License <a name="license"></a>
+<hr>
 This project is licensed under the Apache 2 License - see the [LICENSE](./License) file for details.
 
-### Acknowledgments <a name="acknowledgments"></a>
+<br>
 
+### Acknowledgments <a name="acknowledgments"></a>
+<hr>
 - Based on [Call for Code 2024 Submission Template]([https://gist.github.com/PurpleBooth/109311bb0361f32d87a2](https://github.com/Call-for-Code/Project-Sample))
