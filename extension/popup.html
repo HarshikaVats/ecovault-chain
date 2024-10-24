@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+      rel="stylesheet"
+      type="text/css" />
+    <title>Ecovault Chain</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="extensionHeading">
+        <h1>Ecovault Chain</h1>
+      </div>
+
+      <div id="header" style="display: none">
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+          ">
+          <div style="display: flex">
+            <p style="display: inline">👋 <span id="username"></span></p>
+            <div style="position: relative">
+              <img
+                id="shoppingCart"
+                style="cursor: pointer"
+                width="24"
+                height="24"
+                src="https://img.icons8.com/color/48/checkout.png"
+                alt="checkout" />
+              <p
+                id="cartCount"
+                style="position: absolute; right: -5px; bottom: -2px">
+                0
+              </p>
+            </div>
+          </div>
+
+          <!-- wallet division -->
+          <div id="wallet" style="width: 100vw">
+            <p style="font-size: 0.8rem; text-align: center">
+              <span id="walletAddress"></span>
+              has <br /><b><span id="tfuels"></span></b> tfuels
+            </p>
+          </div>
+
+          <input
+            id="filterRecommendations"
+            type="text"
+            maxlength="30"
+            placeholder="🔍 Search for a product"
+            style="
+              width: 60%;
+              border: 2px solid rgba(128, 128, 128, 0.9);
+              border-radius: 5px;
+              margin-top: 0.8rem;
+            " />
+
+          <p
+            id="error"
+            style="visibility: hidden; color: red; font-size: 0.7rem">
+            Error will pop here
+          </p>
+        </div>
+
+        <p style="display: none">Score: <span id="score"></span></p>
+      </div>
+
+      <div id="loader">
+        <img src="./images/loader.svg" alt="loader" />
+      </div>
+
+      <!-- login form for login -->
+      <form id="loginForm">
+        <div
+          style="display: flex; justify-content: center; align-items: center">
+          <h2 style="margin: 1rem 0rem">Login</h2>
+          <img
+            id="resetCredentials"
+            width="15"
+            height="15"
+            src="https://img.icons8.com/ios-filled/recurring-appointment.png"
+            alt="recurring-appointment"
+            style="cursor: pointer; display: none" />
+        </div>
+        <div>
+          <input
+            id="loginEmail"
+            maxlength="40"
+            required
+            placeholder="Enter your email"
+            type="email"
+            name="email"
+            value="vishalvats2000@gmail.com" />
+        </div>
+
+        <div>
+          <input
+            id="loginPwd"
+            maxlength="12"
+            required
+            placeholder="Enter the password"
+            type="password"
+            name="pwd"
+            value="Vishal@2020" />
+        </div>
+
+        <div>
+          <input
+            id="loginOTP"
+            maxlength="10"
+            placeholder="Enter OTP"
+            type="number"
+            style="display: none" />
+        </div>
+
+        <input type="submit" id="submitLoginForm" value="Log me in" />
+
+        <p style="cursor: pointer; font-size: 0.8rem" id="requestLoginOTP">
+          Forgot password? Click to get OTP
+        </p>
+
+        <p id="loginError">Login error</p>
+        <p
+          id="takeToSignup"
+          style="cursor: pointer; text-decoration: underline">
+          First time user? Create account here
+        </p>
+      </form>
+
+      <!-- signup Form -->
+      <form
+        id="signupForm"
+        style="display: none; justify-content: space-between">
+        <h2 style="margin: 1rem 0rem"><u>Signup</u></h2>
+
+        <div id="postWalletVerification" style="display: none">
+          <div>
+            <input
+              id="walletAddressInput"
+              maxlength="30"
+              required
+              placeholder="Wallet address"
+              type="text"
+              disabled
+              style="cursor: no-drop" />
+          </div>
+
+          <div>
+            <input
+              id="signupName"
+              maxlength="30"
+              required
+              placeholder="Enter your name"
+              type="text" />
+          </div>
+
+          <div>
+            <input
+              id="signupEmail"
+              maxlength="40"
+              required
+              placeholder="Enter your email"
+              type="email" />
+          </div>
+
+          <div>
+            <input
+              id="signupPhone"
+              maxlength="20"
+              required
+              placeholder="Phone no with country code"
+              type="text" />
+          </div>
+
+          <div>
+            <input id="signupDOB" required type="date" />
+          </div>
+
+          <div style="display: flex; justify-content: space-evenly">
+            <select id="signupGender" style="width: 45%" name="gender">
+              <option value="default">Select your gender</option>
+              <option value="m">Male</option>
+              <option value="f">Female</option>
+            </select>
+            <input
+              id="signupPwd"
+              style="width: 45%"
+              type="password"
+              placeholder="Enter a password"
+              required
+              maxlength="12" />
+          </div>
+
+          <div
+            id="interestOptions"
+            style="display: flex; width: 90%; margin: auto">
+            <input name="Clothing" type="checkbox" value="clothing" />
+            <label for="Clothing">Clothing</label>
+            <input name="Food" type="checkbox" value="food" />
+            <label for="Food">Food</label>
+            <input name="Electronics" type="checkbox" value="electronics" />
+            <label for="Electronics">Electronics</label>
+            <input name="Furniture" type="checkbox" value="furniture" />
+            <label for="Furniture">Furniture</label>
+          </div>
+
+          <div>
+            <input
+              id="signupOTP"
+              maxlength="6"
+              disabled
+              placeholder="Enter the OTP!"
+              type="password"
+              style="margin-top: 1rem; cursor: no-drop" />
+          </div>
+        </div>
+
+        <div id="walletVerification">
+          <div>
+            <input
+              required
+              id="walletPrivateKey"
+              maxlength="100"
+              type="password"
+              placeholder="Enter your wallet private key" />
+          </div>
+
+          <p
+            id="createWallet"
+            style="
+              text-decoration: underline;
+              cursor: pointer;
+              margin: 1rem auto;
+            ">
+            Create a new wallet, if you don't have one
+          </p>
+        </div>
+
+        <input type="submit" id="submitSignupForm" value="Validate Wallet" />
+
+        <p id="signupError">Signup error</p>
+      </form>
+
+      <!-- cart details -->
+      <div
+        id="cartDetails"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 100vw;
+          height: 100%;
+          background: red;
+          display: none;
+          background: rgba(255, 255, 255, 0.7);
+          backdrop-filter: blur(5px);
+        ">
+        <h1 id="cartHeader" style="cursor: pointer">Your Cart 🛒<br /></h1>
+
+        <div
+          style="font-size: 0.8rem; text-align: left; width: 80%"
+          id="tag"></div>
+        <div style="font-size: 0.8rem; text-align: left; width: 80%">
+          Grand total: <b>$<span id="cartTotal"></span></b>
+        </div>
+        <div
+          style="
+            font-size: 0.8rem;
+            text-align: left;
+            width: 80%;
+            display: none;
+          ">
+          Pickup total: <b>$<span id="pickupTotal"></span></b>
+        </div>
+
+        <div
+          id="cartProducts"
+          style="
+            min-height: 60vh;
+            max-height: 60vh;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+          ">
+          <!-- cart details will be provided -->
+        </div>
+
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          ">
+          <div
+            id="closeCart"
+            style="
+              background: rgba(255, 0, 0, 0.6);
+              border-radius: 4px;
+              font-size: 1rem;
+              color: white;
+              padding: 4px;
+              cursor: pointer;
+            "
+            id="closeCart">
+            Close Cart
+          </div>
+          <div
+            id="checkoutCart"
+            style="
+              background: rgba(0, 128, 0, 0.6);
+              border-radius: 4px;
+              font-size: 1rem;
+              color: white;
+              padding: 4px;
+              cursor: pointer;
+            "
+            id="checkoutCart">
+            Checkout
+          </div>
+        </div>
+      </div>
+
+      <div id="recommendations">
+        <h2 style="align-self: flex-start">Recommendations</h2>
+        <p style="text-align: center">
+          This section will show the products tailor-made for your account. Have
+          a look at those:
+        </p>
+        <div
+          id="recProducts"
+          style="
+            width: 90%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            max-height: 200px;
+          ">
+          <!-- will be dynamically populated -->
+        </div>
+      </div>
+
+      <div id="rewards">
+        <div style="text-align: center">
+          <h2>Rewards</h2>
+          <p>
+            Keep an eye in this gamified section to see which badges have you
+            earned
+          </p>
+        </div>
+        <div>
+          <p>
+            Your current login streak:
+            <span style="font-weight: bold" id="currentLoginStreak">0</span>
+            days
+          </p>
+        </div>
+        <div
+          id="rewardsLogo"
+          style="display: flex; justify-content: space-around; width: 100%">
+          <div style="text-align: center">
+            <img
+              id="feedbackReward"
+              src="./images/feedback.png"
+              style="filter: grayscale(1)" />
+            <p>Feedback</p>
+          </div>
+          <div style="text-align: center">
+            <img
+              id="loginReward"
+              src="./images/loginStreak.png"
+              style="filter: grayscale(1)" />
+            <p>5 day login streak</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="feedback">
+        <h2>Feedback</h2>
+        <div
+          id="feedbackSubmitted"
+          style="
+            display: none;
+            font-size: 1rem;
+            border: 2px solid green;
+            border-radius: 2px;
+          ">
+          <p>Hurray 🎉, your feedback is shared with the creator</p>
+        </div>
+        <form id="feedbackForm">
+          <div style="display: flex; justify-content: space-evenly">
+            <select id="feedbackType">
+              <option value="default">Select feedback type</option>
+              <option value="Brand Feeback">Brand Feedback</option>
+              <option value="General Feeback">General Feedback</option>
+              <option value="Feature Request Feedback">Feature Request</option>
+              <option value="UI Feedback">UI Feedback</option>
+            </select>
+          </div>
+
+          <div
+            id="brandsFeedbackDiv"
+            style="text-align: center; visibility: hidden">
+            <select id="brandsFeedback"></select>
+          </div>
+
+          <div style="text-align: center">
+            <label for="msg" Enter your message *></label>
+            <textarea
+              placeholder="Maximum of 500 characters.Write the AI prompt between two * and hit ENTER"
+              maxlength="500"
+              style="resize: none"
+              name="msg"
+              id="feedbackMsg"
+              cols="30"
+              rows="10"></textarea>
+          </div>
+
+          <input
+            type="submit"
+            id="submitFeedback"
+            style="width: 100%"
+            value="SUBMIT" />
+
+          <p id="feedbackError" style="text-align: center">Feedback error</p>
+        </form>
+      </div>
+
+      <div id="brands">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+          ">
+          <h2>Explore a brand</h2>
+          <div
+            style="display: flex; justify-content: center; align-items: center">
+            <h3 id="aiText">AI</h3>
+            <label class="switch">
+              <input type="checkbox" class="ai" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+
+        <div
+          id="aiSection"
+          style="width: 100%; display: none; text-align: center">
+          <input
+            type="text"
+            id="aiPrompt"
+            placeholder="AI Prompt (max 120 chars)"
+            maxlength="120"
+            style="
+              border: 2px solid black;
+              border-left: 0;
+              border-top: 0;
+              border-right: 0;
+              text-align: center;
+              width: 100%;
+            " />
+          <small
+            >Hit ENTER to get the results. Tweak the prompt to get better
+            results</small
+          >
+          <small
+            id="aiError"
+            style="color: red; visibility: hidden; display: block"
+            >Here the error will come</small
+          >
+        </div>
+
+        <div id="notAI" style="width: 100%">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+            ">
+            <select id="brandCategory">
+              <option value="default">Any category</option>
+              <option value="food">Food</option>
+              <option value="clothing">Clothing</option>
+              <option value="furniture">Furniture</option>
+              <option value="electronics">Electronics</option>
+            </select>
+
+            <select id="brandGender">
+              <option value="default">Any Gender</option>
+              <option value="m">Male</option>
+              <option value="f">Female</option>
+            </select>
+
+            <select id="brandAge">
+              <option value="default">Any age</option>
+              <option value="old">Old</option>
+              <option value="kids">Kids</option>
+              <option value="adult">Adult</option>
+            </select>
+          </div>
+
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+            ">
+            <select id="brandName">
+              <!-- will be dynamically populated -->
+            </select>
+
+            <input
+              type="submit"
+              id="getBrands"
+              style="width: 50%"
+              value="SUBMIT" />
+          </div>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          ">
+          <p>OR</p>
+          <div
+            style="display: flex; justify-content: center; align-items: center">
+            <input
+              type="file"
+              name="mlImage"
+              id="mlImageInput"
+              style="border-radius: 1px" />
+            <img
+              id="mlLoader"
+              style="visibility: hidden"
+              src="images/loader.svg"
+              width="40px"
+              height="40px"
+              alt="" />
+          </div>
+          <p id="mlLabels" style="text-align: center; display: none">
+            Labels will come here
+          </p>
+        </div>
+
+        <img
+          id="aiLoader"
+          src="./images/aiLoader.svg"
+          style="
+            width: 100%;
+            height: 150px;
+            text-align: center;
+            display: none;
+          " />
+
+        <div
+          id="brandsProducts"
+          style="
+            height: 90%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            max-height: 180px;
+          "></div>
+      </div>
+
+      <footer>
+        <p id="Tofeedback">FEEDBACK</p>
+        <p id="Tobrands">BRANDS</p>
+        <p id="Torewards">REWARDS</p>
+      </footer>
+    </div>
+
+    <script src="./popup.js" type="module"></script>
+  </body>
+</html>

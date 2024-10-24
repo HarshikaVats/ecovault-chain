@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Ecovault Chain",
+  "version": "3.0",
+  "icons": {
+    "32": "images/logo-32.png",
+    "48": "images/logo-48.png",
+    "64": "images/logo-64.png",
+    "128": "images/logo-128.png"
+  },
+  "description": "Extension made for winning the IBM Call for Code 2024 Event. It is for the buyers who can use this great project",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage",
+    "tts"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "https://versatilevats.com/ibm/c4c/extension/checkout.html"
+      ]
+    }
+  ]
+}
