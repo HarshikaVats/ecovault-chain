@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en" style="position: relative; overflow-x: hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecovault Chain | Checkout Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+    <link rel="icon" type="image/x-icon" href="logo.png" />
+
+    <!-- google map script -->
+    <script>
+      let map;
+      let markers = [];
+      let userLocation;
+      const locations = [
+        { lat: 28.401643, lng: 77.355687, title: "Atlas" },
+        { lat: 28.382091, lng: 77.365687, title: "Luna" },
+        { lat: 12.96014, lng: 77.615189, title: "Bolt" },
+      ];
+
+      // Initialize and add the map with default locations
+      function initMap() {
+        const defaultLocation = locations[0];
+        map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 12,
+          center: defaultLocation,
+        });
+
+        // Place the predefined location markers
+        addLocationMarkers();
+      }
+
+      // Function to add predefined location markers
+      function addLocationMarkers() {
+        for (let i = 0; i < locations.length; i++) {
+          const marker = new google.maps.Marker({
+            position: locations[i],
+            map: map,
+            title: locations[i].title,
+          });
+
+          markers.push(marker);
+        }
+      }
+
+      // Function to ask for user's location and populate the dropdown with nearby locations
+      function askForLocation() {
+        document.body.style.pointerEvents = "none";
+
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              const userLocation = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+              };
+
+              // Clear previous dropdown content
+              const dropdown = document.getElementById("dropdown");
+              dropdown.innerHTML = "";
+
+              // Filter locations within 10 km
+              const nearbyLocations = locations.filter((location) => {
+                const distance = calculateDistance(
+                  userLocation.lat,
+                  userLocation.lng,
+                  location.lat,
+                  location.lng
+                );
+                return distance <= 10; // Filter locations within 10 km
+              });
+
+              // Create and append options to the dropdown
+              if (nearbyLocations.length > 0) {
+                const option = document.createElement("option");
+                option.value = "NA";
+                option.textContent = "Do not opt for Tron Vaults";
+                dropdown.appendChild(option);
+
+                nearbyLocations.forEach((location, index) => {
+                  let distance = calculateDistance(
+                    userLocation.lat,
+                    userLocation.lng,
+                    location.lat,
+                    location.lng
+                  ).toFixed(2);
+
+                  let option = document.createElement("option");
+                  option.value = location.title;
+                  option.setAttribute("distance", distance);
+                  option.textContent = `${location.title} - ${distance} km`;
+                  dropdown.appendChild(option);
+                });
+              } else {
+                const option = document.createElement("option");
+                option.textContent = "No locations within 10 km";
+                dropdown.appendChild(option);
+              }
+            },
+            () => {
+              alert(
+                "Geolocation failed. Please allow to use the vault feature."
+              );
+            }
+          );
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+
+        document.body.style.pointerEvents = "auto";
+      }
+
+      // Function to calculate distance using Google Maps spherical library
+      function calculateDistance(lat1, lng1, lat2, lng2) {
+        const userLatLng = new google.maps.LatLng(lat1, lng1);
+        const locationLatLng = new google.maps.LatLng(lat2, lng2);
+        return (
+          google.maps.geometry.spherical.computeDistanceBetween(
+            userLatLng,
+            locationLatLng
+          ) / 1000
+        ); // Convert from meters to kilometers
+      }
+
+      // Function to center the map at the selected marker from the list
+      function goToLocation(index) {
+        const marker = markers[index];
+        map.setCenter(marker.getPosition());
+        map.setZoom(15); // Optional: adjust the zoom level
+      }
+    </script>
+
+    <style>
+      * {
+        font-family: "Montserrat", sans-serif;
+        user-select: none;
+      }
+
+      ::-webkit-scrollbar {
+        width: 3px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #fff;
+        border-radius: 5px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+        height: 20px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        border-radius: 5px;
+      }
+
+      #connectSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      #map {
+        height: 500px;
+        width: 100vw;
+        position: relative;
+      }
+
+      /* Style to position the vault list on the bottom left */
+      #locationList {
+        position: absolute;
+        bottom: 10px;
+        left: 12vw;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* Semi-transparent background */
+        padding: 10px;
+        border-radius: 5px;
+        list-style: none;
+        z-index: 999; /* Ensure the list stays above the map */
+      }
+
+      #locationList li {
+        margin-bottom: 5px;
+      }
+
+      #locationList a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+      }
+
+      #locationList a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        #dropdown {
+          position: relative;
+          right: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+  <body style="visibility: hidden">
+    <!-- all orders -->
+    <div id="allOrders" syle="display: none">
+      <p style="text-align: center; font-size: 2rem; margin-top: 1rem">
+        <span
+          style="
+            border: 6px solid black;
+            padding: 4px;
+            border-radius: 6px;
+            box-shadow: 4px 4px;
+          "
+          id="heading"
+          >Orders</span
+        >
+      </p>
+
+      <select style="position: absolute; right: 3rem" id="dropdown">
+        <option>Nearest vaults will be shown at checkout</option>
+      </select>
+
+      <p style="text-align: center">
+        One tfuel = $10 <br />
+        Your current discount rate is:
+        <span id="discount" style="font-weight: bold">0</span>%
+      </p>
+
+      <!-- div for the current and past orders -->
+      <div id="orders" class="row m-5">
+        <!-- div for the current order completion -->
+        <div id="currentOrderDiv" class="text-center m-3">
+          <h3 class="text-dark text-center" style="font-weight: bold">
+            <span style="border-bottom: 2px dashed black">Current Order</span>
+          </h3>
+          <div id="noCurrentOrder">
+            <p style="font-weight: bold; display: block" class="text-dark">
+              No current order found. Try opening the page via the extension and
+              make sure you have some products in the cart
+            </p>
+          </div>
+
+          <div id="currentOrderExtension" style="display: none">
+            <!-- User & payment details -->
+            <div
+              id="payout"
+              style="display: block; text-align: center; font-size: 1rem">
+              <div
+                id="emailBlock"
+                style="display: flex; justify-content: space-between">
+                <p><b>Email</b></p>
+                <p id="email"></p>
+              </div>
+              <div
+                id="totalPriceBlock"
+                style="display: flex; justify-content: space-between">
+                <p><b>Total Price</b></p>
+                <p id="totalPrice"></p>
+              </div>
+              <div
+                id="totalTfuelsBlock"
+                style="display: flex; justify-content: space-between">
+                <p><b>Total Tfuels</b></p>
+                <p id="totalTfuels"></p>
+              </div>
+              <div
+                id="totalBlock"
+                style="display: flex; justify-content: space-between">
+                <p><b>Total Item(s)</b></p>
+                <p id="items"></p>
+              </div>
+              <div
+                id="priceAfterDiscountBlock"
+                style="display: none; justify-content: space-between">
+                <p><b>Discounted price</b></p>
+                <p id="priceAfterDiscount"></p>
+              </div>
+              <div id="pickupDetails" style="display: block">
+                <div
+                  id="tagBlock"
+                  style="display: flex; justify-content: space-between">
+                  <p><b>Theta Tag ID</b></p>
+                  <p id="tag"></p>
+                </div>
+                <div
+                  id="pickupTotalBlock"
+                  style="display: flex; justify-content: space-between">
+                  <p><b>Pickup Total</b></p>
+                  <p id="pickupTotal"></p>
+                </div>
+                <div
+                  id="decidePickup"
+                  style="display: flex; justify-content: space-between">
+                  <p
+                    id="agreePickup"
+                    style="
+                      padding: 8px;
+                      font-size: 1rem;
+                      background: rgba(0, 255, 0, 0.5);
+                      border-radius: 8px;
+                      font-weight: bold;
+                      cursor: pointer;
+                    ">
+                    I will pickup
+                  </p>
+                  <p
+                    id="rejectPickup"
+                    style="
+                      padding: 8px;
+                      font-size: 1rem;
+                      background: rgba(255, 0, 0, 0.5);
+                      border-radius: 8px;
+                      font-weight: bold;
+                      cursor: pointer;
+                    ">
+                    No, I won't
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- breakup of instant and theta card payment -->
+            <div
+              id="paymentInfo"
+              style="display: none; text-align: center; margin: 15px">
+              <span id="tagPayment"></span> tfuels will be provided to your
+              Theta Tag
+            </div>
+
+            <!-- Payment completion button -->
+            <div
+              id="process"
+              style="
+                padding: 8px;
+                display: block;
+                cursor: pointer;
+                font-size: 1rem;
+                font-weight: bold;
+                text-align: center;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                background: rgba(0, 255, 0, 0.5);
+              ">
+              Complete Payment
+            </div>
+
+            <!-- Error division -->
+            <div>
+              <p
+                id="orderError"
+                style="
+                  color: red;
+                  display: none;
+                  text-align: center;
+                  font-weight: bold;
+                ">
+                You do not have the required number of tfuels
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- div for the past orders -->
+        <div
+          id="pastOrders"
+          class="d-flex flex-column justify-content-center align-items-center bg-light">
+          <h3 class="text-dark text-center" style="font-weight: bold">
+            <span style="border-bottom: 2px dashed black">Past Orders</span>
+          </h3>
+          <h3
+            id="noPastOrders"
+            style="display: block"
+            class="text-dark text-center">
+            No past orders as of now!!
+          </h3>
+          <div
+            id="pastOrdersTable"
+            style="
+              max-height: 330px;
+              overflow: auto;
+              display: none;
+              margin-top: 1rem;
+            ">
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>View</th>
+                  <th>Order ID</th>
+                  <th>Date</th>
+                  <th>Price</th>
+                  <th>Tfuels</th>
+                  <th>Discount (%)</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- div for the Try-on section -->
+      <div
+        id="tryon"
+        style="
+          width: 100vw;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        ">
+        <div style="position: relative">
+          <p style="text-align: center; font-size: 2rem; margin-top: 1rem">
+            <span
+              style="
+                border: 6px solid black;
+                padding: 4px;
+                border-radius: 6px;
+                box-shadow: 4px 4px;
+              "
+              id="heading"
+              >Clothes Try On</span
+            >
+          </p>
+          <img
+            id="tryonLoader"
+            style="position: absolute; top: 0; right: -80px; display: none"
+            src="tryon-loader.svg"
+            height="80px" />
+        </div>
+
+        <!-- create a single select dropdown with 4 values -->
+        <div class="text-center m-4">
+          <select
+            id="tryonSelect"
+            class="form-select"
+            style="width: 300px; margin: 0 auto"></select>
+        </div>
+
+        <p
+          style="
+            margin: auto;
+            text-align: center;
+            margin: 1rem;
+            font-size: 0.9rem;
+          ">
+          This is the <b>Stabel VITON</b> virtual try-on model, and currently
+          works with upper-garments/tops
+        </p>
+
+        <div
+          id="tryonError"
+          style="
+            visibility: hidden;
+            color: red;
+            font-weight: bold;
+            text-align: center;
+          ">
+          There is some error
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-sm-12 col-lg-3 text-center">
+            <img
+              modelURL="https://versatilevats.com/ibm/c4c/extension/users/m1.jpg"
+              id="tryonItems"
+              src="https://versatilevats.com/ibm/c4c/extension/users/m1.jpg"
+              width="180px"
+              height="300px"
+              style="
+                border-radius: 10px;
+                margin: 10px auto;
+                filter: grayscale(100%);
+                pointer-events: none;
+              "
+              onclick="fetchClothingImage(this)"
+              alt="Male 1" />
+          </div>
+          <div class="col-sm-12 col-lg-3 text-center">
+            <img
+              modelURL="https://versatilevats.com/ibm/c4c/extension/users/m2.jpg"
+              id="tryonItems"
+              src="https://versatilevats.com/ibm/c4c/extension/users/m2.jpg"
+              width="180px"
+              height="300px"
+              style="
+                border-radius: 10px;
+                margin: 10px auto;
+                filter: grayscale(100%);
+                pointer-events: none;
+              "
+              onclick="fetchClothingImage(this)"
+              alt="Male 2" />
+          </div>
+          <div class="col-sm-12 col-lg-3 text-center">
+            <img
+              modelURL="https://versatilevats.com/ibm/c4c/extension/users/f1.jpg"
+              id="tryonItems"
+              src="https://versatilevats.com/ibm/c4c/extension/users/f1.jpg"
+              width="180px"
+              height="300px"
+              style="
+                border-radius: 10px;
+                margin: 10px auto;
+                filter: grayscale(100%);
+                pointer-events: none;
+              "
+              onclick="fetchClothingImage(this)"
+              alt="Female 1" />
+          </div>
+          <div class="col-sm-12 col-lg-3 text-center">
+            <img
+              modelURL="https://versatilevats.com/ibm/c4c/extension/users/f2.jpg"
+              id="tryonItems"
+              src="https://versatilevats.com/ibm/c4c/extension/users/f2.jpg"
+              width="180px"
+              height="300px"
+              style="
+                border-radius: 10px;
+                margin: 10px auto;
+                filter: grayscale(100%);
+                pointer-events: none;
+              "
+              onclick="fetchClothingImage(this)"
+              alt="Female 2" />
+          </div>
+        </div>
+      </div>
+
+      <!-- div for nfts that will be credited after certain achievements -->
+      <div id="nfts" class="container" style="margin-top: 5rem">
+        <h1 class="text-center mt-2">
+          <span
+            style="
+              font-weight: bold;
+              border: 6px solid black;
+              padding: 4px;
+              border-radius: 6px;
+              box-shadow: 4px 4px;
+            "
+            >NFTs section</span
+          >
+        </h1>
+        <p class="mt-4 text-center">
+          Complete certain tasks and then you can unlock these exciting NFTs and
+          their associated perks too!!
+        </p>
+        <div class="row mt-4">
+          <!-- nft1: firstPurchase -->
+          <div class="col-lg-3 col-md-6 col-xs-12 p-3 text-center">
+            <h3 style="font-weight: bold">firstPurchase (FP)</h3>
+            <p style="font-size: 0.8rem">
+              Credited when the user makes his/her first purchase
+            </p>
+            <a href="" target="_blank" style="pointer-events: none">
+              <img
+                style="max-width: 250px; width: 100%; filter: grayscale(100%)"
+                src="https://versatilevats.com/ibm/c4c/extension/gifs/nft1.gif"
+                alt="nft1"
+                id="nft1" />
+            </a>
+            <p style="font-size: 0.8rem">
+              5% off on each order once this NFT is unlocked
+            </p>
+          </div>
+
+          <!-- nft2: 100tfuels -->
+          <div class="col-lg-3 col-md-6 col-xs-12 p-3 text-center">
+            <h3 style="font-weight: bold">100tfuels (100T)</h3>
+            <p style="font-size: 0.8rem">
+              Credited when the user spends 100 or more tfuels on a single order
+            </p>
+            <a href="" target="_blank" style="pointer-events: none">
+              <img
+                style="max-width: 250px; width: 100%; filter: grayscale(100%)"
+                src="https://versatilevats.com/ibm/c4c/extension/gifs/nft2.gif"
+                alt="nft2"
+                id="nft2" />
+            </a>
+            <p style="font-size: 0.8rem">
+              7% off on each order once this NFT is unlocked
+            </p>
+          </div>
+
+          <!-- nft3: 5items -->
+          <div class="col-lg-3 col-md-6 col-xs-12 p-3 text-center">
+            <h3 style="font-weight: bold">5items (5I)</h3>
+            <p style="font-size: 0.8rem">
+              Credited when there are 5 or more items in a single order
+            </p>
+            <a href="" target="_blank" style="pointer-events: none">
+              <img
+                style="max-width: 250px; width: 100%; filter: grayscale(100%)"
+                src="https://versatilevats.com/ibm/c4c/extension/gifs/nft3.gif"
+                alt="nft3"
+                id="nft3" />
+            </a>
+            <p style="font-size: 0.8rem">
+              10% off on each order once this NFT is unlocked
+            </p>
+          </div>
+
+          <!-- nft4: fifthPurchase -->
+          <div class="col-lg-3 col-md-6 col-xs-12 p-3 text-center">
+            <h3 style="font-weight: bold">fifthPurchase</h3>
+            <p style="font-size: 0.8rem">
+              Credited when the user makes his/her fifth purchase
+            </p>
+            <a href="" target="_blank" style="pointer-events: none">
+              <img
+                style="max-width: 250px; width: 100%; filter: grayscale(100%)"
+                src="https://versatilevats.com/ibm/c4c/extension/gifs/nft4.gif"
+                alt="nft4"
+                id="nft4" />
+            </a>
+            <p style="font-size: 0.8rem">
+              15% off on each order once this NFT is unlocked
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- overlay div -->
+      <div
+        id="overlay"
+        style="
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: none;
+          position: absolute;
+          align-items: center;
+          justify-content: center;
+          backdrop-filter: blur(5px);
+          background: rgba(255, 255, 255, 0.5);
+        ">
+        <div
+          style="
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+          ">
+          <img src="loader.svg" alt="" />
+          <p id="overlayText" style="font-size: 1.5rem">
+            Transaction logs will be shown
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- single order -->
+    <div
+      id="singleOrder"
+      style="
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      ">
+      <h1 class="text-center mt-2">
+        <span
+          style="
+            font-weight: bold;
+            padding: 4px;
+            border-radius: 6px;
+            box-shadow: 4px 4px;
+            border: 6px solid black;
+          "
+          >Previous Order</span
+        >
+      </h1>
+
+      <!-- show the data for the selected order -->
+      <p
+        style="
+          visibility: hidden;
+          margin-top: 5rem;
+          width: 500px;
+          text-align: justify;
+        ">
+        In this particular order, you spent
+        <span id="soTotalTfuels" style="font-weight: bold"></span> for
+        <span id="soTtotalItems" style="font-weight: bold"></span> items. You
+        shopped items of the following brands:
+        <span id="soBrands" style="font-weight: bold"></span>. <br />
+        <br />
+        You <span id="soPickup" style="font-weight: bold"></span> availed the
+        pickup facility <span id="vaultLocation"></span>. The items that you
+        bought are: <span id="soItems" style="font-weight: bold"></span>. The
+        actual price of the entire order was
+        <span id="soTotalPrice" style="font-weight: bold"></span>. You received
+        a <span id="soDiscout" style="font-weight: bold">0%</span> discount on
+        the entire order. <br /><br />
+        Keep shopping with <b>EcoVault Chain</b> :) (. ❛ ᴗ ❛.)
+      </p>
+    </div>
+
+    <!-- maps division -->
+    <div id="maps" style="margin-top: 5rem">
+      <h2
+        style="
+          text-align: center;
+          text-decoration: underline;
+          margin-bottom: 2rem;
+        ">
+        <span
+          style="
+            border: 6px solid black;
+            padding: 4px;
+            border-radius: 6px;
+            box-shadow: 4px 4px;
+          "
+          >Vault Locations</span
+        >
+      </h2>
+
+      <div style="width: 80vw" class="m-2 text-justify m-auto">
+        <p>
+          This section is provided to offer users the option to choose physical
+          vaults for package delivery, reducing carbon emissions. Vaults are a
+          sustainable alternative to conventional delivery, and here's why: By
+          selecting a vault, the customer can reduce the carbon footprint if
+          they are traveling along the same route as the delivery person. This
+          helps cut down unnecessary travel by delivery vehicles.
+        </p>
+        <p>
+          This feature helps users locate physical vaults within a 10 km radius
+          from their current location. As of now, the available vaults are:
+          <b>Atlas, Luna, and Bolt</b>
+        </p>
+        <p>
+          Upon selecting the "physical vaults" option during payment, users will
+          be shown the nearest vault locations. They can easily pick the most
+          convenient one to store their order.
+        </p>
+      </div>
+
+      <!-- List of Locations -->
+      <ul id="locationList">
+        <li id="location-0">
+          <a href="javascript:void(0);" onclick="goToLocation(0)">Atlas</a>
+        </li>
+        <li id="location-1">
+          <a href="javascript:void(0);" onclick="goToLocation(1)">Luna</a>
+        </li>
+        <li id="location-2">
+          <a href="javascript:void(0);" onclick="goToLocation(2)">Bolt</a>
+        </li>
+      </ul>
+
+      <div
+        id="map"
+        style="
+          width: 80vw;
+          margin: auto;
+          border-radius: 1rem;
+          margin-bottom: 1rem;
+        ">
+        <!-- List of Locations -->
+        <ul id="locationList">
+          <li id="location-0">
+            <a href="javascript:void(0);" onclick="goToLocation(0)">Atlas</a>
+          </li>
+          <li id="location-1">
+            <a href="javascript:void(0);" onclick="goToLocation(1)">Luna</a>
+          </li>
+          <li id="location-2">
+            <a href="javascript:void(0);" onclick="goToLocation(2)">Bolt</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- script for checkout feature -->
+    <script>
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+
+      // single order view
+      if (urlParams.get("bin") && urlParams.get("time")) {
+        document.querySelector("#maps").style.display = "none";
+        document.getElementById("allOrders").style.display = "none";
+        document.getElementById("singleOrder").style.display = "flex";
+
+        const bin = urlParams.get("bin");
+        const time = decodeURIComponent(urlParams.get("time"));
+
+        const tryonError = document.querySelector("#tryonError");
+
+        async function getBinData(bin) {
+          let myHeaders = new Headers();
+          myHeaders.append("Content-Type", "application/json");
+
+          let raw = JSON.stringify({
+            binId: bin,
+          });
+
+          let requestOptions = {
+            body: raw,
+            method: "POST",
+            headers: myHeaders,
+            redirect: "follow",
+          };
+
+          const bindata = await fetch(
+            "https://node-server-sainipratap-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/getBin",
+            requestOptions
+          )
+            .then((response) => response.json())
+            .then((result) => result);
+
+          if (bindata.error != "") {
+            console.log(bindata.error);
+            return;
+          }
+          if (bindata.result.orders.length == 0) {
+            console.log("NO orders found");
+          } else {
+            let finalOrder = {};
+            let found = false;
+            const orders = bindata.result.orders;
+            Object.keys(orders).forEach((key) => {
+              if (orders[key].time == time) {
+                found = true;
+                finalOrder = orders[key];
+              }
+            });
+
+            if (!found) {
+              console.log("No order found with the provided time");
+              return;
+            }
+
+            document.querySelector("#soTotalTfuels").textContent =
+              finalOrder.totalTfuels + " tfuels";
+            document.querySelector("#soTtotalItems").textContent =
+              finalOrder.items.length;
+            // use the finalOrder.breakup object to get the keys and print them in the soBrands span
+            let count = 1;
+            let brands = "";
+            Object.keys(finalOrder.breakup).forEach((key) => {
+              if (count == Object.entries(finalOrder.breakup).length) {
+                brands += key + " (" + finalOrder.breakup[key] + ")";
+                return;
+              }
+              brands += key + " (" + finalOrder.breakup[key] + "), ";
+              count++;
+            });
+            document.querySelector("#soBrands").textContent = brands;
+
+            document.querySelector("#soPickup").textContent =
+              finalOrder.pickupAvailed ? "did" : "did not";
+
+            document.querySelector("#vaultLocation").innerHTML =
+              finalOrder.pickupLocation == ""
+                ? ""
+                : `at the <b>${finalOrder.pickupLocation} vault</b>`;
+
+            count = 1;
+            let items = "";
+            finalOrder.items.forEach((item) => {
+              if (count == finalOrder.items.length) {
+                items += item.name;
+                return;
+              }
+              items += item.name + ", ";
+              count++;
+            });
+            document.querySelector("#soItems").textContent = items;
+
+            document.querySelector("#soTotalPrice").textContent =
+              "$" + finalOrder.totalPrice;
+
+            document.querySelector("#soDiscout").textContent =
+              finalOrder.discount + "%";
+
+            document.querySelector("#singleOrder > p").style.visibility =
+              "visible";
+            console.log(finalOrder);
+          }
+        }
+
+        getBinData(bin);
+      } else {
+        document.querySelector("#maps").style.display = "block";
+        document.getElementById("allOrders").style.display = "block";
+        document.getElementById("singleOrder").style.display = "none";
+      }
+
+      document.body.style.visibility = "visible";
+
+      const clothesFlaskServer =
+        "https://clothes-tryon-sainipratap-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/";
+      async function fetchClothingImage(e) {
+        const garment = document.querySelector("#tryonSelect").value;
+        if (garment === "") {
+          tryonError.style.visibility = "visible";
+          tryonError.textContent = "Please select a garment to try on!!";
+          return;
+        }
+
+        tryonError.style.visibility = "hidden";
+        document.body.style.pointerEvents = "none";
+        await fetchTryonImageFromServer(e.getAttribute("modelURL"), garment, e);
+        document.body.style.pointerEvents = "auto";
+      }
+
+      async function fetchTryonImageFromServer(model, garment, displayImage) {
+        document.querySelector("#tryonLoader").style.display = "block";
+        document.querySelectorAll("#tryonItems").forEach((item) => {
+          item.src = item.getAttribute("modelURL");
+          item.style.filter = "grayscale(100%)";
+        });
+
+        const response = await fetch(clothesFlaskServer, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model_image_url: model,
+            garment_image_url: garment,
+          }),
+        });
+
+        const result = await response.json();
+
+        if (result.file_path) {
+          const imageResponse = await fetch(
+            `${clothesFlaskServer}/download_image?file_path=${result.file_path}`
+          );
+          if (imageResponse.ok) {
+            const blob = await imageResponse.blob();
+            const imageUrl = URL.createObjectURL(blob);
+            displayImage.src = imageUrl;
+            displayImage.height = 300;
+            displayImage.width = 180;
+            displayImage.style.filter = "grayscale(0%)";
+          } else {
+            console.error("Error fetching the image.");
+            tryonError.style.visibility = "visible";
+            tryonError.textContent = "Error fetching the customized image";
+          }
+        } else {
+          console.error("Error:", result.error);
+          tryonError.style.visibility = "visible";
+          tryonError.textContent = "Server error! Try again";
+        }
+
+        document.querySelector("#tryonLoader").style.display = "none";
+      }
+    </script>
+
+    <!-- Google Maps API script -->
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_H9SqPtxxCgEtzzs6WckbVijFEeVd5Ug&amp;callback=initMap&amp;libraries=geometry"></script>
+
+    <script>
+      window.addEventListener("message", async function (event) {
+        if (event.data.action === "askForLocation") askForLocation();
+      });
+    </script>
+
+    <!-- wastsonx orchestrate ai assistant -->
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "c58c1f93-1acf-4b6e-b8a1-3585b4511d8b", // The ID of this integration.
+        region: "aws-us-east-1", // The region your integration is hosted in.
+        serviceInstanceID: "20240910-1708-1923-10dc-434a761ffa89", // The ID of your service instance.
+        onLoad: async (instance) => {
+          await instance.render();
+        },
+      };
+      setTimeout(function () {
+        const t = document.createElement("script");
+        t.src =
+          "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+          (window.watsonAssistantChatOptions.clientVersion || "latest") +
+          "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+  </body>
+</html>
