@@ -1,0 +1,37 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: ecovault-deployments
+spec:
+  schedule: "0 */10 * * *" # 0 */10 * * *: Every 10 hours & */3 * * * * for every 3 minutes
+  concurrencyPolicy: "Replace"
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            parent: "ecovault-deployments"
+        spec:
+          serviceAccountName: default
+          containers:
+            - name: cli
+              image: openshift/origin-cli:latest
+              command:
+                - /bin/sh
+                - -c
+                - |
+                  echo "Starting the scaling process at: $(date)"
+                  oc scale deployment/ml-model --replicas=0;
+                  oc scale deployment/node-server --replicas=0;
+                  oc scale deployment/theta-server --replicas=0;
+                  oc scale deployment/clothes-tryon --replicas=0;
+                  oc scale deployment/c4c-descope --replicas=0;
+                  echo "Sleeping for 30 seconds at: $(date)";
+                  sleep 30;
+                  oc scale deployment/ml-model --replicas=1;
+                  oc scale deployment/node-server --replicas=1;
+                  oc scale deployment/theta-server --replicas=1;
+                  oc scale deployment/clothes-tryon --replicas=1;
+                  oc scale deployment/c4c-descope --replicas=1;
+                  echo "Scaling back to 1 at: $(date)"
+          restartPolicy: OnFailure
