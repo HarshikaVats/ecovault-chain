@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/8aae4ad3-4262-46b2-9efa-45ca8352bd91)<div>
+<div>
   <img width="64" height="64" src="https://img.icons8.com/laces/64/40C057/e.png" alt="e"/>
   <img width="64" height="64" src="https://img.icons8.com/laces/64/40C057/c.png" alt="c"/>
   <img width="64" height="64" src="https://img.icons8.com/wired/64/40C057/circled.png" alt="o"/>
