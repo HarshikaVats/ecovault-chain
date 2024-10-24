@@ -335,8 +335,6 @@ Extension for buyers: https://chromewebstore.google.com/detail/iaohncjbhmfoofcne
 
 > But you know what, till the extension isn't published, you can visit the checkout page as it has the AI assistant with which you can interact with. https://versatilevats.com/ibm/c4c/extension/checkout.html
 
----
-
 <br>
 
 ### License <a name="license"></a>
