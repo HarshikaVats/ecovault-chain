@@ -18,7 +18,7 @@
 
 <br>
 
-> Empowering Sellers, Connecting Buyers, and Reducing Carbon Footprint with Eco-Friendly Vaults!
+> Transforming Local Shops into Global Brands, While Reducing Carbon Footprint with Secure, Eco-Friendly Vaults
 
 <hr>
 
