@@ -262,8 +262,8 @@ See our [description document](./docs/DESCRIPTION.md) for log in credentials.
 
 ### License <a name="license"></a>
 
-This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache 2 License - see the [LICENSE](./LICENSE) file for details.
 
 ### Acknowledgments <a name="acknowledgments"></a>
 
-- Based on [Billie Thompson's README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2).
+- Based on [Call for Code 2024 Submission Template]([https://gist.github.com/PurpleBooth/109311bb0361f32d87a2](https://github.com/Call-for-Code/Project-Sample))
