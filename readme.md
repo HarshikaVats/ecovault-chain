@@ -137,7 +137,7 @@ This project goes beyond simple order and delivery — it redefines how e-commer
 
 - [watsonx ai, data, & governance](https://www.ibm.com/products/watsonx-ai) -
   <p align="justify">It is being used in the <b>Text to SQL AI Model</b> for the buyers in the extension. We leveraged IBM WatsonX.ai, IBM’s cutting-edge AI platform, to build and deploy the Test-to-SQL model—a natural language processing model that translates user queries into SQL commands. The model enhances the user experience by allowing users to input text-based queries and retrieve structured data efficiently. Here's the step-by-step process that was followed using WatsonX to make the model live:</p>
-  <img width="256px" src="https://github.com/user-attachments/assets/e93fa881-8536-4ea7-9e8b-2196f46f13de">
+  <p align="center"><img width="256px" src="https://github.com/user-attachments/assets/e93fa881-8536-4ea7-9e8b-2196f46f13de"></p>
   <p align="justify">
     <b>1. Data Ingestion and Preprocessing with WatsonX Data</b>: Using IBM WatsonX.data, we ingested a large dataset containing human-readable test queries and their corresponding SQL commands. The platform’s ability to handle unstructured data, including various text formats and SQL queries, made the ingestion process seamless. Through WatsonX’s data connectors, we were able to connect various data sources such as relational databases (MySQL) and existing datasets to build a comprehensive training corpus.
 
@@ -187,7 +187,7 @@ This project goes beyond simple order and delivery — it redefines how e-commer
 
   <br>
 
-  <p align="justify">
+  <p align="center">
     <img width="250px" src="https://github.com/user-attachments/assets/42c0f5b6-e915-408c-a4b8-17a042221582">
     <img width="250px" src="https://github.com/user-attachments/assets/c27f6164-48c5-4f91-ac54-e6f5e923c38b">
     <img width="250px" src="https://github.com/user-attachments/assets/c666b7e8-83ca-4805-ba5d-6cc3e1b2d4c2">
