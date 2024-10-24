@@ -251,6 +251,36 @@ Let's have a look at how things work for a **seller:** <a name="seller"></a>
   <img src="https://github.com/user-attachments/assets/e2071563-bf20-460d-8f75-9c4b2ddea9fb" width="512px">
 </p>
 
+Let's have a look at how things work for a **buyer:** <a name="buyer"></a>
+
+<p align="justify">1. Registration is super-easy and buyers have to provide a couple of details to create their account because that will make up their <b>recommendations</b></p>
+
+<p align="justify">2. Landing section or the first page that one sees is the <b>recomemndations page</b>, where according to the user's gender, age, and interests, the products are shown (increasing the probability of users buying a product)</p>
+
+<p align="justify">3. The <b>feedback section</b> allows the user to send a feedback. There are various type of feedbacks that can be sent. Apart from the brand feedback (that is sent to the brand email), all other feedbacska re sent to my admin id (like General feedback, UI feedback, feature request). For all of the feedbacks, before sending the email, the content of the feedback is sent to the <b>IBM Granite Model</b> so that its tone could be found, and is shared with the email, so that the reader can quickly understanf the feedback.<br><br>Not only this, if a user wants to create a proper feedback, then he/she can <b>wrap the prompt in astericks(*) and then hit enter to get the result back from the IBM foundational model.</b></p>
+
+<p align="justify">4. In order to incentivize the users to continue using the extension, certain badges will be provided which can be seen in the <b>Rewards section</b>. As of now, two badges are there: one for sending first feedback, while the other is for visiting the extension for consecutive 5 days. In either of the cases, users will not only receive the badges, but will also <b>get some cryptocurrency (tfuels)</b></p>
+
+<p align="justify">5. <b>Using the ML Model for Image Classification:</b> WHen you are inside the BRANDS section, then you can provide an image which will be processed by the ML model to fetch the top 3 product labels from the image that are in the product inventory of the application. Let's understand this in a better way:<br><br>
+The <b>ML Zero Shot Image Classification model</b> is designed to enhance the buyer's experience by enabling intuitive product discovery. Imagine you like the decor in a friend's room and want to purchase similar items. By simply uploading an image of the room through the extension, the <b>ML model</b> analyzes the image and fetches the top 3 labels that best describe the products present. This intelligent classification ensures you are presented with only the relevant products you're looking for, saving time and effort. This functionality eliminates the need for manual searches and bridges the gap between visual inspiration and online shopping. Additionally, by standardizing product labels across different brands, the model ensures consistency, even when brands use varying terminologies for similar products.
+</p>
+
+<p align="justify">6. The <b>text-to-SQL model is made using IBM WatsonX</b> (already discussed in the previous sections). It provides a uique way of interacting with the database and returns the correct response most of the time.</p>
+
+<h3>Now, let's know more about the CHECKOUT process and physical ecovaults</h3>
+
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a3b90b69-2bab-459a-ac22-82baee5c4801" width="256px">
+  <img src="https://github.com/user-attachments/assets/11d904ec-cdea-40db-b90b-2ee15e93865e" width="256px">
+  <img src="https://github.com/user-attachments/assets/3958a5a8-28bf-414b-880a-373b34942b16" width="256px">
+  <img src="https://github.com/user-attachments/assets/945b01bf-0ad8-4779-9757-e9ab58f3acc3" width="256px">
+  <img src="https://github.com/user-attachments/assets/a7457c3f-f32b-4e5f-b8d5-34e2d4af437f" width="256px">
+  <img src="https://github.com/user-attachments/assets/27481328-5c4c-4e97-b15d-01502741c9f8" width="256px">
+  <img src="https://github.com/user-attachments/assets/9aef56d4-e402-45e3-9f6c-5a04f755aa5a" width="256px">
+  <img src="https://github.com/user-attachments/assets/076b3c73-64b6-4f57-992f-1d32ae25c960" width="256px">
+</p>
+
 <br>
 
 ### Presentation materials <a name="presentation-materials"></a>
