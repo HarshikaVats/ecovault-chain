@@ -83,27 +83,21 @@
 <ul>
   <li><b>Empowering Sellers & Buyers:</b> We provide small, local sellers with the opportunity to transcend their local presence by tapping into the global market through blockchain technology. The platform allows sellers to list their products on a decentralized marketplace and securely interact with buyers through verified, transparent transactions. By using blockchain, the sellers gain trust, and buyers are assured of a secure purchase process. Sellers can now turn their local shops into global brands, enhancing both visibility and revenue opportunities. Buyers, on the other hand, are granted access to a wide variety of products, with the added security of blockchain’s immutable transaction records.</li>
 
-  <li><b>Reducing Carbon Emissions via Smart EcoVaults:</b> Traditional e-commerce delivery methods often involve inefficient delivery routes, contributing to carbon emissions. Our solution to this is the introduction of EcoVaults, which are strategically placed, RFID-accessible hardware vaults. These vaults serve as delivery points for buyers to collect their packages, significantly reducing redundant delivery trips and cutting down emissions. By enabling buyers to pick up their packages when it’s most convenient for them, we further decrease the environmental impact of last-mile deliveries.
+  <li><b>Reducing Carbon Emissions via Smart Ecovaults:</b> Traditional e-commerce delivery methods often involve inefficient delivery routes, contributing to carbon emissions. Our solution to this is the introduction of Ecovaults, which are strategically placed, RFID-accessible hardware vaults. These vaults serve as delivery points for buyers to collect their packages, significantly reducing redundant delivery trips and cutting down emissions. By enabling buyers to pick up their packages when it’s most convenient for them, we further decrease the environmental impact of last-mile deliveries.
 
 This project goes beyond simple order and delivery — it redefines how e-commerce can operate by integrating green logistics with a focus on sustainability. As trade and shopping will continue indefinitely, our solution is designed to be a future-proof method of streamlining logistics while benefiting both sellers and buyers, ultimately contributing to a greener planet.</li>
 
-  <li><b>Integration with Web3:</b> Instead of sticking to traditional Web2-based applications, we leverage the security and transparency of Web3 technology. By using blockchain, all transactions and deliveries are securely tracked, providing a robust layer of trust between buyers and sellers. This decentralization ensures that data integrity is maintained while reducing the risk of fraud or tampering. Through Web3, we offer a multi-point access experience via a browser extension, WhatsApp chatbot, and the physical EcoVaults, providing users with flexible, seamless touchpoints regardless of their comfort level with technology.</li>
+  <li><b>Integration with Web3:</b> Instead of sticking to traditional Web2-based applications, we leverage the security and transparency of Web3 technology. By using blockchain, all transactions and deliveries are securely tracked, providing a robust layer of trust between buyers and sellers. This decentralization ensures that data integrity is maintained while reducing the risk of fraud or tampering. Through Web3, we offer a multi-point access experience via a browser extension, WhatsApp chatbot, and the physical Ecovaults, providing users with flexible, seamless touchpoints regardless of their comfort level with technology.</li>
 
-  <li><b>Sustainability & Scalability:</b> Built using IBM’s RedHat OpenShift Container Platform, our infrastructure scales effortlessly as the user base grows. OpenShift provides us with the power to maintain high performance, ensuring that our platform remains operational even as demand increases. By integrating cutting-edge WatsonX services for AI-based assistance, IBM Cloud technologies for deployment, and a commitment to sustainability, we believe EcoVault Chain will revolutionize e-commerce logistics and reshape the future of retail, making it more secure, transparent, and eco-friendly.</li>
+  <li><b>Sustainability & Scalability:</b> Built using IBM’s RedHat OpenShift Container Platform, our infrastructure scales effortlessly as the user base grows. OpenShift provides us with the power to maintain high performance, ensuring that our platform remains operational even as demand increases. By integrating cutting-edge WatsonX services for AI-based assistance, IBM Cloud technologies for deployment, and a commitment to sustainability, we believe Ecovault Chain will revolutionize e-commerce logistics and reshape the future of retail, making it more secure, transparent, and eco-friendly.</li>
 </ul>
 </p>
 
 <br>
 
 ### UN SDG fulfilled by the project <a name="un-sdg"></a>
-<p>
-  <img width="128px" src="https://github.com/user-attachments/assets/51fa2b9e-19ab-4829-99ea-afea9640392b">
-  <img width="128px" src="https://github.com/user-attachments/assets/a54057e9-2a22-40b7-af7e-2df86ba65ca9">
-  <img width="128px" src="https://github.com/user-attachments/assets/d515e2f9-e132-4117-bc22-a97416742ee5">
-  <img width="128px" src="https://github.com/user-attachments/assets/4e06ed55-6766-401d-99ad-a5e3043993dd">
-  <img width="128px" src="https://github.com/user-attachments/assets/3731ffe7-5c9d-4013-aff7-33859ca6bb97">
-  <img width="128px" src="https://github.com/user-attachments/assets/f74a0fe5-efed-4c75-9290-ee75a2c58f0d">
-  <img width="128px" src="https://github.com/user-attachments/assets/f2063cc3-02c5-421e-b1cb-226f964c12eb">  
+<p align="center">
+  <img width="128px" src="https://github.com/user-attachments/assets/51fa2b9e-19ab-4829-99ea-afea9640392b"> <img width="128px" src="https://github.com/user-attachments/assets/a54057e9-2a22-40b7-af7e-2df86ba65ca9"> <img width="128px" src="https://github.com/user-attachments/assets/d515e2f9-e132-4117-bc22-a97416742ee5"> <img width="128px" src="https://github.com/user-attachments/assets/4e06ed55-6766-401d-99ad-a5e3043993dd"> <img width="128px" src="https://github.com/user-attachments/assets/3731ffe7-5c9d-4013-aff7-33859ca6bb97"> <img width="128px" src="https://github.com/user-attachments/assets/f74a0fe5-efed-4c75-9290-ee75a2c58f0d"> <img width="128px" src="https://github.com/user-attachments/assets/f2063cc3-02c5-421e-b1cb-226f964c12eb"> 
 </p>
 
 <p align="justify">Let's have a look at the various <b>UN SDG</b> fulfilled by this project: 
