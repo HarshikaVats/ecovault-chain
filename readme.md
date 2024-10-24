@@ -29,12 +29,15 @@
   - [How our technology solution can help](#how-our-technology-solution-can-help)
   - [Our idea](#our-idea)
   - [UN SDG](#un-sdg)
+  - [Theme Alignment](#alignment)
 - [Technology implementation](#technology-implementation)
   - [IBM watsonx product(s) used](#ibm-ai-services-used)
   - [Other IBM technology used](#other-ibm-technology-used)
   - [Solution architecture](#solution-architecture)
+  - [Seller Overview](#seller)
+  - [Buyer Overview](#buyer)
 - [Presentation materials](#presentation-materials)
-  - [Solution demo video](#solution-demo-video)
+  - [Solution demo video](#demo-video)
   - [Project development roadmap](#project-development-roadmap)
 - [Additional details](#additional-details)
   - [How to run the project](#how-to-run-the-project)
@@ -120,7 +123,7 @@ This project goes beyond simple order and delivery — it redefines how e-commer
 
 <br>
 
-### Alignment with the theme
+### Alignment with the theme <a name="alignment"></a>
 <p align="justify">
   Our project aligns seamlessly with the theme of <b>"How can generative AI technology improve equitable access to essential resources and opportunities for all people?"</b> by leveraging the power of generative AI and Web3 technologies to create an inclusive ecosystem for both buyers and sellers. The platform provides smaller sellers, who might otherwise struggle to gain visibility in traditional markets, with the opportunity to be recognized by a wide pool of buyers. This access to a larger audience helps to level the playing field, granting smaller vendors the same chances for success as larger businesses.</p>
 
@@ -230,7 +233,7 @@ This project is a perfect culmination of software and hardware, and provide a lo
 <hr>
 <p align="center"><img width="1024px" src="https://github.com/user-attachments/assets/7c4595e9-b0cd-4ab0-895e-b500fbf2fd04"></p>
 
-Let's have a look at how things work for a **seller:**
+Let's have a look at how things work for a **seller:** <a name="seller"></a>
 <p align="justify">1. Once email is entered in the login form, it is checked whether this email is associated with a brand or not? If it is, then an email authentication is carried out (to ensure that the right person is accessing the account) wheeras if the email is new, then some details have to be filled to create a new account. <b>Passwordless authentication</b> is safeguarding the authentication process.</p> 
 
 <p align="justify">2. Brands have two main pages to interact on the website: the <b>products</b> page and the <b>analytics</b> page. The <b>products</b> page allows brands to manage their inventory, while the <b>analytics</b> page offers insights and data related to the brand's performance on the platform. When adding a product, the <b>Zero Shot Image Classification Model</b> automatically generates an appropriate label for the product image to ensure platform-wide consistency. For example, one brand might label a product as a <b>phone</b>, while another might use terms like <b>mobile phone</b> or <b>cell phone</b>. Such inconsistencies could affect the accuracy of the <b>text-to-SQL method</b> that buyers use for queries. The model helps standardize these labels based on existing products in the system. However, if the model encounters an unfamiliar image, such as a jacket, and incorrectly labels it (e.g., as a <b>phone</b>), the brand can manually update the label to ensure proper categorization for future reference. </p>
@@ -254,7 +257,7 @@ Let's have a look at how things work for a **seller:**
 <hr>
 _INSTRUCTIONS: The following deliverables should be officially posted to your My Team > Submissions section of the [Call for Code Global Challenge resources site](https://cfc-prod.skillsnetwork.site/), but you can also include them here for completeness. Replace the examples seen here with your own deliverable links._
 
-### Solution demo video <a name="issue-we-are-solving"></a>
+### Solution demo video <a name="demo-video"></a>
 [![Watch the video](https://raw.githubusercontent.com/Liquid-Prep/Liquid-Prep/main/images/readme/IBM-interview-video-image.png)](https://youtu.be/vOgCOoy_Bx0)
 
 <br>
