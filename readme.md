@@ -182,11 +182,6 @@
 
 <br>
 
-- [WatsonX Flow Engine](https://wxflows.ibm.stepzen.com/docs)
-  <p align="justify">In the project, WatsonX Flow Engine is utilized to build a Retrieval-Augmented Generation <b>(RAG) server</b>. This server processes a PDF document that contains all the detailed nuances of the project. Users can interact with the RAG server by submitting queries through the Orchestrate Assistant. The server then retrieves the relevant information from the PDF and provides accurate, context-aware answers to the users. This functionality allows users to ask questions about the project, covering all aspects of its structure and features, ensuring they get comprehensive insights into the project without needing external sources. The RAG server plays a crucial role in enhancing user engagement and knowledge sharing by making the project's detailed documentation easily accessible in an interactive format.</p>
-
-<br>
-
 - [Foundational models with Prompt Lab](https://www.ibm.com/docs/en/watsonx/saas?topic=solutions-prompt-lab)
   <p align="justify">In my project, I leveraged IBM WatsonX's foundational models through Prompt Lab, specifically utilizing the IBM Granite model in two critical scenarios. Firstly, the Granite model generates feedback based on user prompts, ensuring a dynamic and intelligent response to the input provided by the users. Secondly, it analyzes the tone of the feedback submitted by users to categorize it, allowing for better insight into user sentiment. Both of these functionalities are seamlessly integrated into the Node.js server, making the process highly efficient and automated. This implementation highlights the versatility of WatsonX's foundational models in addressing real-world user interactions and sentiment analysis.</p>
 
