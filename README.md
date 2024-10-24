@@ -133,7 +133,17 @@
  <br> 
 
 - [watsonx Assistant](https://cloud.ibm.com/catalog/services/watsonx-assistant) 
-  <img src="https://github.com/user-attachments/assets/efdd4123-4e5b-46ab-8992-028d41006018">
+  <img src="https://github.com/user-attachments/assets/84c5d956-f369-4f08-9fba-4c3e991a3121">
+
+  <br>
+
+  <p align="justify">
+    <img width="250px" src="https://github.com/user-attachments/assets/42c0f5b6-e915-408c-a4b8-17a042221582">
+    <img width="250px" src="https://github.com/user-attachments/assets/c27f6164-48c5-4f91-ac54-e6f5e923c38b">
+    <img width="250px" src="https://github.com/user-attachments/assets/c666b7e8-83ca-4805-ba5d-6cc3e1b2d4c2">
+    <img width="250px" src="https://github.com/user-attachments/assets/b85306e8-a5df-4010-ae7b-a7144ee20a8f">
+    <img width="250px" src="https://github.com/user-attachments/assets/69a13833-be4f-45a9-aa93-c69b4654f6aa">
+  </p>
 
 
 ### Other IBM technology used <a name="other-ibm-technology-used"></a>
