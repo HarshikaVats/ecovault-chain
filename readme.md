@@ -96,8 +96,14 @@ This project goes beyond simple order and delivery — it redefines how e-commer
 <br>
 
 ### UN SDG fulfilled by the project <a name="un-sdg"></a>
-<p align="center">
-  <img width="128px" src="https://github.com/user-attachments/assets/51fa2b9e-19ab-4829-99ea-afea9640392b"> <img width="128px" src="https://github.com/user-attachments/assets/a54057e9-2a22-40b7-af7e-2df86ba65ca9"> <img width="128px" src="https://github.com/user-attachments/assets/d515e2f9-e132-4117-bc22-a97416742ee5"> <img width="128px" src="https://github.com/user-attachments/assets/4e06ed55-6766-401d-99ad-a5e3043993dd"> <img width="128px" src="https://github.com/user-attachments/assets/3731ffe7-5c9d-4013-aff7-33859ca6bb97"> <img width="128px" src="https://github.com/user-attachments/assets/f74a0fe5-efed-4c75-9290-ee75a2c58f0d"> <img width="128px" src="https://github.com/user-attachments/assets/f2063cc3-02c5-421e-b1cb-226f964c12eb"> 
+<p align="center"> 
+  <img width="128px" src="https://github.com/user-attachments/assets/51fa2b9e-19ab-4829-99ea-afea9640392b"> 
+  <img width="128px" src="https://github.com/user-attachments/assets/a54057e9-2a22-40b7-af7e-2df86ba65ca9"> 
+  <img width="128px" src="https://github.com/user-attachments/assets/d515e2f9-e132-4117-bc22-a97416742ee5"> 
+  <img width="128px" src="https://github.com/user-attachments/assets/4e06ed55-6766-401d-99ad-a5e3043993dd"> 
+  <img width="128px" src="https://github.com/user-attachments/assets/3731ffe7-5c9d-4013-aff7-33859ca6bb97"> 
+  <img width="128px" src="https://github.com/user-attachments/assets/f74a0fe5-efed-4c75-9290-ee75a2c58f0d"> 
+  <img width="128px" src="https://github.com/user-attachments/assets/f2063cc3-02c5-421e-b1cb-226f964c12eb">  
 </p>
 
 <p align="justify">Let's have a look at the various <b>UN SDG</b> fulfilled by this project: 
