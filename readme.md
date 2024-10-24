@@ -175,23 +175,39 @@
     <img width="250px" src="https://github.com/user-attachments/assets/69a13833-be4f-45a9-aa93-c69b4654f6aa">
   </p>
 
-### Other IBM technology used <a name="other-ibm-technology-used"></a>
+  <p align="justify">The custom skill built for WatsonX Orchestrate empowers buyers by offering an intuitive and flexible interface for interacting with registered brands. Users can easily fetch details about the brands, retrieve specific product information, inquire about their orders, and get updates on any particular order status—all within the assistant. The skill provides its responses in a structured, tabular format, enabling users to sort and filter the data directly within the assistant interface. This feature enhances user flexibility by allowing them to customize how they view the information, making it easy to focus on specific details such as order status, product names, or brands of interest.</p>
 
-INSTRUCTIONS: List any other IBM technology or IBM AI services used in your solution and describe how each component was used. If you can provide details on where these were used in your code, that would help the judges review your submission.
+  <p align="justify">In addition to this, the IBM Granite model is integrated into the WatsonX Orchestrate AI assistant to provide natural language support (even ot realted to the project itself). This powerful combination of custom skills and AI models creates a seamless experience, ensuring that buyers can efficiently manage and inquire about their interactions with brands. By leveraging WatsonX Orchestrate and IBM Granite, the solution delivers robust data handling and query response capabilities, offering a high level of user convenience and interactivity. This use of IBM services ensures a dynamic and intelligent platform for streamlining buyer-brand interactions.
+  </p>
+
+<br>
+
+- [WatsonX Flow Engine](https://wxflows.ibm.stepzen.com/docs)
+  <p align="justify">In the project, WatsonX Flow Engine is utilized to build a Retrieval-Augmented Generation <b>(RAG) server</b>. This server processes a PDF document that contains all the detailed nuances of the project. Users can interact with the RAG server by submitting queries through the Orchestrate Assistant. The server then retrieves the relevant information from the PDF and provides accurate, context-aware answers to the users. This functionality allows users to ask questions about the project, covering all aspects of its structure and features, ensuring they get comprehensive insights into the project without needing external sources. The RAG server plays a crucial role in enhancing user engagement and knowledge sharing by making the project's detailed documentation easily accessible in an interactive format.</p>
+
+<br>
+
+- [Foundational models with Prompt Lab](https://www.ibm.com/docs/en/watsonx/saas?topic=solutions-prompt-lab)
+  <p align="justify">In my project, I leveraged IBM WatsonX's foundational models through Prompt Lab, specifically utilizing the IBM Granite model in two critical scenarios. Firstly, the Granite model generates feedback based on user prompts, ensuring a dynamic and intelligent response to the input provided by the users. Secondly, it analyzes the tone of the feedback submitted by users to categorize it, allowing for better insight into user sentiment. Both of these functionalities are seamlessly integrated into the Node.js server, making the process highly efficient and automated. This implementation highlights the versatility of WatsonX's foundational models in addressing real-world user interactions and sentiment analysis.</p>
+
+
+### Other IBM technology used <a name="other-ibm-technology-used"></a>
 
 **Additional IBM AI services (Remove any that you did not use)**
 
-- [Watson Machine Learning](https://cloud.ibm.com/catalog/services/watson-machine-learning) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+- [Red Hat OpenShift Container Platform on VPC Landing Zone]() - We chose this service for scaling and managing our Kubernetes clusters on IBM Cloud. The integration with the VPC landing zone ensures security, compliance, and flexibility for handling the dynamic needs of our application.
 
-- [Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+- [IBM Cloud Object Storage]() - We used IBM Cloud Object Storage to handle and store all user data, project files, and large assets, especially those utilized in our WatsonX Flow. The service provides scalable, secure storage and simplifies the retrieval of essential data for smooth operations.
 
-- [Natural Language Understanding](https://cloud.ibm.com/catalog/services/natural-language-understanding) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+- [IBM Cloud Databases for MySQL]() - For our database needs, we opted for MySQL on IBM Cloud to efficiently manage all our data. With features like automated backups, high availability, and disaster recovery, this service ensures our database remains robust and resilient against any potential downtime.
 
-- [Speech to Text](https://cloud.ibm.com/catalog/services/speech-to-text) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+- [IBM API Connect]() - We relied on IBM API Connect to manage and expose our APIs securely. This helped us handle authentication, rate limiting, and monitoring for APIs that interact with the WatsonX services and other third-party systems, ensuring a seamless integration across various components.
 
-- [Text to Speech](https://cloud.ibm.com/catalog/services/text-to-speech) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+- [IBM Log Analysis]() - We implemented IBM Log Analysis for centralized log management and real-time analysis. This tool allowed us to track system performance, resolve debugging issues, and audit activities, which are crucial for maintaining our system's reliability and performance.
 
-- [Language Translator](https://cloud.ibm.com/catalog/services/language-translator) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+- [IBM Cloud Monitoring]() - Monitoring the health of our infrastructure was a key focus, and IBM Cloud Monitoring allowed us to track system performance in real-time. With this service, we can quickly identify and address any performance issues in our OpenShift deployment, ensuring a seamless user experience.
+
+> These services provide the technical foundation necessary for maintaining an efficient, scalable, and secure application environment.
 
 ### Solution architecture <a name="solution-architecture"></a>
 
