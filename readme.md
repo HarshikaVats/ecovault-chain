@@ -18,7 +18,7 @@
 
 <br>
 
-> Transforming Local Shops into Global Brands, While Reducing Carbon Footprint with Secure, Eco-Friendly Vaults
+> The perfect software and hardware project transforming local shops into global brands, while reducing carbon footprint with secure, eco-friendly vaults
 
 <hr>
 
